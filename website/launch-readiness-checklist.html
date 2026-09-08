@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EasyCTET Season 1 Launch Readiness</title>
+<meta name="description" content="Interactive EasyCTET Season 1 launch readiness checklist.">
+<style>
+  :root {
+    --navy: #0f172a;
+    --surface: #1e293b;
+    --surface-2: #334155;
+    --line: #475569;
+    --ivory: #f8fafc;
+    --muted: #cbd5e1;
+    --quiet: #94a3b8;
+    --gold: #f59e0b;
+    --gold-deep: #b45309;
+    --green: #34d399;
+    --red: #f87171;
+    --radius: 12px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--ivory);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+
+  .wrap { width: min(100% - 32px, 960px); margin: 0 auto; }
+  header { padding: 42px 0 28px; border-bottom: 1px solid var(--surface-2); }
+  .brand { color: var(--gold); font: 700 0.85rem/1 Outfit, Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+  h1, h2, h3 { font-family: Outfit, Inter, sans-serif; line-height: 1.2; }
+  h1 { max-width: 680px; margin: 10px 0 12px; font-size: clamp(2rem, 5vw, 3.4rem); }
+  h2 { margin: 0; font-size: 1.35rem; }
+  h3 { margin: 0 0 7px; font-size: 1rem; }
+  p { color: var(--muted); }
+  .intro { max-width: 720px; margin: 0; }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 14px 0;
+    background: rgba(15, 23, 42, .95);
+    border-bottom: 1px solid var(--surface-2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .toolbar-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .progress-copy { min-width: 150px; color: var(--muted); font-size: .88rem; }
+  .progress-bar { flex: 1; min-width: 180px; height: 8px; overflow: hidden; background: var(--surface-2); border-radius: 99px; }
+  .progress-fill { width: 0; height: 100%; background: var(--green); border-radius: inherit; transition: width .2s ease; }
+  button {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 9px 13px;
+    background: transparent;
+    color: var(--ivory);
+    font: inherit;
+    cursor: pointer;
+  }
+  button:hover { border-color: var(--gold); }
+  .reset { color: var(--muted); font-size: .82rem; }
+
+  main { padding: 30px 0 70px; }
+  .section { margin: 0 0 28px; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+  .section-note { margin: 0; color: var(--quiet); font-size: .82rem; }
+  .items { display: grid; gap: 8px; }
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 13px 14px;
+    background: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: var(--radius);
+  }
+  .item:has(input:checked) { border-color: rgba(52, 211, 153, .5); }
+  input[type="checkbox"] { width: 19px; height: 19px; flex: 0 0 auto; margin: 2px 0 0; accent-color: var(--green); }
+  label { flex: 1; cursor: pointer; color: var(--muted); font-size: .92rem; }
+  label strong { color: var(--gold); font-size: .7rem; letter-spacing: .05em; text-transform: uppercase; }
+  .decision {
+    padding: 20px;
+    background: rgba(180, 83, 9, .14);
+    border: 1px solid rgba(245, 158, 11, .45);
+    border-radius: var(--radius);
+  }
+  .decision p { overflow-wrap: anywhere; }
+  .decision p { margin: 6px 0 0; }
+  footer { padding: 24px 0 42px; border-top: 1px solid var(--surface-2); color: var(--quiet); font-size: .8rem; }
+
+  @media (max-width: 640px) {
+    .wrap { width: min(100% - 24px, 960px); }
+    header { padding-top: 28px; }
+    .toolbar-row { gap: 10px; }
+    .progress-bar { order: 3; flex-basis: 100%; }
+  }
+
+  @media print {
+    body { background: white; color: black; }
+    .toolbar { position: static; background: white; }
+    .toolbar button { display: none; }
+    .item, .decision { background: white; border-color: #bbb; }
+    label, p, .progress-copy, .section-note { color: #222; }
+    .brand { color: #222; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">EasyCTET · Season 1</div>
+    <h1>Launch readiness checklist</h1>
+    <p class="intro">Focused CTET Paper 1 launch before the 9 October 2026 exam. Use this page as the working control sheet for product quality, trust, payments, support, and a disciplined first release.</p>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap toolbar-row">
+    <div class="progress-copy"><strong id="completed">0</strong> of <strong id="total">0</strong> complete</div>
+    <div class="progress-bar" aria-label="Checklist progress"><div class="progress-fill" id="progressFill"></div></div>
+    <button class="reset" id="resetButton" type="button">Reset checklist</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="section">
+    <div class="section-head"><h2>1. Product scope and brand promise</h2><p class="section-note">Lock the story</p></div>
+    <div class="items">
+      <div class="item"><input id="scope-1" type="checkbox"><label for="scope-1"><strong>Launch blocker</strong><br>Present the app as CTET Paper 1 only.</label></div>
+      <div class="item"><input id="scope-2" type="checkbox"><label for="scope-2"><strong>Launch blocker</strong><br>Confirm the visible subjects are CDP, English, EVS, Hindi, and Mathematics.</label></div>
+      <div class="item"><input id="scope-3" type="checkbox"><label for="scope-3"><strong>Launch blocker</strong><br>Remove Paper 2, Marathi, Science, and Social Studies from current launch copy.</label></div>
+      <div class="item"><input id="scope-4" type="checkbox"><label for="scope-4"><strong>Launch blocker</strong><br>Use the approved tagline: “Serious CTET Paper 1 prep, simplified.”</label></div>
+      <div class="item"><input id="scope-5" type="checkbox"><label for="scope-5">Add the independent, non-affiliation statement where required.</label></div>
+      <div class="item"><input id="scope-6" type="checkbox"><label for="scope-6">Confirm free-tier and Pro Pass scope are identical across the app, Play Store, and messages.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>2. App functional readiness</h2><p class="section-note">Make it dependable</p></div>
+    <div class="items">
+      <div class="item"><input id="app-1" type="checkbox"><label for="app-1"><strong>Launch blocker</strong><br>Production build installs successfully on the target Android version.</label></div>
+      <div class="item"><input id="app-2" type="checkbox"><label for="app-2"><strong>Launch blocker</strong><br>Free content is accessible without payment.</label></div>
+      <div class="item"><input id="app-3" type="checkbox"><label for="app-3"><strong>Launch blocker</strong><br>Paid content locks and unlocks correctly after a successful purchase.</label></div>
+      <div class="item"><input id="app-4" type="checkbox"><label for="app-4"><strong>Launch blocker</strong><br>Purchase restoration works after reinstall or device change.</label></div>
+      <div class="item"><input id="app-5" type="checkbox"><label for="app-5"><strong>Launch blocker</strong><br>Questions, options, answer keys, and explanations display correctly.</label></div>
+      <div class="item"><input id="app-6" type="checkbox"><label for="app-6"><strong>Launch blocker</strong><br>Timer, navigation, answer selection, submission, and score calculation work correctly.</label></div>
+      <div class="item"><input id="app-7" type="checkbox"><label for="app-7"><strong>Launch blocker</strong><br>Progress survives app close, interruption, and relaunch.</label></div>
+      <div class="item"><input id="app-8" type="checkbox"><label for="app-8"><strong>Launch blocker</strong><br>Core practice remains usable without internet after installation.</label></div>
+      <div class="item"><input id="app-9" type="checkbox"><label for="app-9">Confirm the app behaves acceptably on at least one lower-spec Android phone.</label></div>
+      <div class="item"><input id="app-10" type="checkbox"><label for="app-10">Confirm reset-local-data behaviour works and is clearly labelled.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>3. Content quality and coverage</h2><p class="section-note">Protect trust</p></div>
+    <div class="items">
+      <div class="item"><input id="content-1" type="checkbox"><label for="content-1"><strong>Launch blocker</strong><br>Validate every question ID is unique.</label></div>
+      <div class="item"><input id="content-2" type="checkbox"><label for="content-2"><strong>Launch blocker</strong><br>Validate every correct answer points to an existing option.</label></div>
+      <div class="item"><input id="content-3" type="checkbox"><label for="content-3"><strong>Launch blocker</strong><br>Validate every question has a non-empty explanation.</label></div>
+      <div class="item"><input id="content-4" type="checkbox"><label for="content-4"><strong>Launch blocker</strong><br>Review answer keys and explanations for factual accuracy.</label></div>
+      <div class="item"><input id="content-5" type="checkbox"><label for="content-5"><strong>Launch blocker</strong><br>Check for duplicate or near-duplicate questions.</label></div>
+      <div class="item"><input id="content-6" type="checkbox"><label for="content-6">Check English and Hindi text for grammar, spelling, and rendering issues.</label></div>
+      <div class="item"><input id="content-7" type="checkbox"><label for="content-7">Record the content review date and reviewer name for each subject.</label></div>
+      <div class="item"><input id="content-8" type="checkbox"><label for="content-8">Prepare a correction process for users who report a questionable answer or explanation.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>4. Privacy, legal, and trust</h2><p class="section-note">Make claims truthful</p></div>
+    <div class="items">
+      <div class="item"><input id="legal-1" type="checkbox"><label for="legal-1"><strong>Launch blocker</strong><br>Publish the Privacy Policy at a stable HTTPS URL.</label></div>
+      <div class="item"><input id="legal-2" type="checkbox"><label for="legal-2"><strong>Launch blocker</strong><br>Publish the Terms of Service at a stable HTTPS URL.</label></div>
+      <div class="item"><input id="legal-3" type="checkbox"><label for="legal-3"><strong>Launch blocker</strong><br>Replace generic operator wording with the real legal name or business name.</label></div>
+      <div class="item"><input id="legal-4" type="checkbox"><label for="legal-4"><strong>Launch blocker</strong><br>Confirm the legal documents match actual app behaviour.</label></div>
+      <div class="item"><input id="legal-5" type="checkbox"><label for="legal-5"><strong>Launch blocker</strong><br>Complete the Google Play Data Safety form truthfully.</label></div>
+      <div class="item"><input id="legal-6" type="checkbox"><label for="legal-6">Confirm no analytics, ad trackers, or unapproved SDKs are included.</label></div>
+      <div class="item"><input id="legal-7" type="checkbox"><label for="legal-7">Confirm the government non-affiliation disclaimer is visible in the app or store materials.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>5. Payments and Google Play</h2><p class="section-note">Test the money path</p></div>
+    <div class="items">
+      <div class="item"><input id="play-1" type="checkbox"><label for="play-1"><strong>Launch blocker</strong><br>Complete developer account verification.</label></div>
+      <div class="item"><input id="play-2" type="checkbox"><label for="play-2"><strong>Launch blocker</strong><br>Configure the final Paper 1 product or SKU.</label></div>
+      <div class="item"><input id="play-3" type="checkbox"><label for="play-3"><strong>Launch blocker</strong><br>Confirm final price, tax display, and purchase wording.</label></div>
+      <div class="item"><input id="play-4" type="checkbox"><label for="play-4"><strong>Launch blocker</strong><br>Test successful, cancelled, declined, pending, and restored purchases.</label></div>
+      <div class="item"><input id="play-5" type="checkbox"><label for="play-5">Confirm refund instructions point users to the correct Google Play process.</label></div>
+      <div class="item"><input id="play-6" type="checkbox"><label for="play-6">Defer complex referral rewards until the basic purchase and support flow is reliable.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>6. Support and operations</h2><p class="section-note">Be ready for real people</p></div>
+    <div class="items">
+      <div class="item"><input id="support-1" type="checkbox"><label for="support-1"><strong>Launch blocker</strong><br>Confirm the support email receives mail.</label></div>
+      <div class="item"><input id="support-2" type="checkbox"><label for="support-2"><strong>Launch blocker</strong><br>Prepare responses for installation, billing, content correction, offline use, and data reset.</label></div>
+      <div class="item"><input id="support-3" type="checkbox"><label for="support-3"><strong>Launch blocker</strong><br>Define a realistic support response window around the full-time job.</label></div>
+      <div class="item"><input id="support-4" type="checkbox"><label for="support-4">Create a private issue log with date, problem, severity, status, and resolution.</label></div>
+      <div class="item"><input id="support-5" type="checkbox"><label for="support-5">Create a rollback or hotfix decision process for serious production issues.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>7. Launch communications</h2><p class="section-note">Invite the first users</p></div>
+    <div class="items">
+      <div class="item"><input id="launch-1" type="checkbox"><label for="launch-1"><strong>Launch blocker</strong><br>Prepare one personal-network launch message.</label></div>
+      <div class="item"><input id="launch-2" type="checkbox"><label for="launch-2"><strong>Launch blocker</strong><br>Prepare one teacher-community message.</label></div>
+      <div class="item"><input id="launch-3" type="checkbox"><label for="launch-3"><strong>Launch blocker</strong><br>Prepare one public social post.</label></div>
+      <div class="item"><input id="launch-4" type="checkbox"><label for="launch-4">Prepare seven useful daily questions for the first week.</label></div>
+      <div class="item"><input id="launch-5" type="checkbox"><label for="launch-5">Ensure every message says Paper 1 and names the five subjects.</label></div>
+      <div class="item"><input id="launch-6" type="checkbox"><label for="launch-6">Avoid guaranteed results, fear-based urgency, spam, and unapproved community promotion.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>8. Soft-launch gate</h2><p class="section-note">Do this before broad promotion</p></div>
+    <div class="items">
+      <div class="item"><input id="soft-1" type="checkbox"><label for="soft-1">A new user understands the Paper 1 scope without explanation.</label></div>
+      <div class="item"><input id="soft-2" type="checkbox"><label for="soft-2">A user can start free practice within a few minutes.</label></div>
+      <div class="item"><input id="soft-3" type="checkbox"><label for="soft-3">A user can complete a test and understand the result.</label></div>
+      <div class="item"><input id="soft-4" type="checkbox"><label for="soft-4">A user can use core practice after disabling internet.</label></div>
+      <div class="item"><input id="soft-5" type="checkbox"><label for="soft-5">A tester can complete or simulate the purchase flow.</label></div>
+      <div class="item"><input id="soft-6" type="checkbox"><label for="soft-6">No critical crash, data loss, incorrect answer key, or payment entitlement issue remains open.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>9. First-season measurement</h2><p class="section-note">Learn before scaling</p></div>
+    <div class="items">
+      <div class="item"><input id="measure-1" type="checkbox"><label for="measure-1">Set up a private spreadsheet for launch-update requests, installs, quiz starts, completions, repeat practice, conversions, refunds, support issues, and corrections.</label></div>
+      <div class="item"><input id="measure-2" type="checkbox"><label for="measure-2">Review results after 24 hours, 7 days, and immediately after the 9 October exam period.</label></div>
+      <div class="item"><input id="measure-3" type="checkbox"><label for="measure-3">Write down the next-season investment decisions supported by the evidence.</label></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>10. Defer to next season</h2><p class="section-note">Protect focus</p></div>
+    <div class="items">
+      <div class="item"><input id="defer-1" type="checkbox"><label for="defer-1">Paper 2 content and broader subject expansion.</label></div>
+      <div class="item"><input id="defer-2" type="checkbox"><label for="defer-2">Paid advertising and broad influencer campaigns.</label></div>
+      <div class="item"><input id="defer-3" type="checkbox"><label for="defer-3">Complex referral leaderboards and major redesigns.</label></div>
+      <div class="item"><input id="defer-4" type="checkbox"><label for="defer-4">Account creation, social login, and large features without Season 1 evidence.</label></div>
+    </div>
+  </section>
+
+  <section class="decision">
+    <h2>Final go / no-go decision</h2>
+    <p>Go only when the production app is stable, content is accurate, payment and entitlement behaviour is tested, legal and support details are live, and a small group has completed the soft-launch flow.</p>
+    <p><strong>Decision:</strong> GO / HOLD &nbsp;&nbsp; <strong>Date:</strong> ____________________</p>
+    <p><strong>Open blockers:</strong> ________________________________________________</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">EasyCTET Season 1 · Your checklist is stored only in this browser.</div>
+</footer>
+
+<script>
+  const storageKey = "easyctet-season-1-launch-checklist";
+  const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];
+  const completed = document.getElementById("completed");
+  const total = document.getElementById("total");
+  const progressFill = document.getElementById("progressFill");
+  const resetButton = document.getElementById("resetButton");
+
+  function updateProgress() {
+    const count = checkboxes.filter((box) => box.checked).length;
+    const percent = checkboxes.length ? Math.round((count / checkboxes.length) * 100) : 0;
+    completed.textContent = count;
+    total.textContent = checkboxes.length;
+    progressFill.style.width = `${percent}%`;
+  }
+
+  function save() {
+    const state = Object.fromEntries(checkboxes.map((box) => [box.id, box.checked]));
+    localStorage.setItem(storageKey, JSON.stringify(state));
+    updateProgress();
+  }
+
+  function restore() {
+    try {
+      const state = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      checkboxes.forEach((box) => { box.checked = state[box.id] === true; });
+    } catch {
+      localStorage.removeItem(storageKey);
+    }
+    updateProgress();
+  }
+
+  checkboxes.forEach((box) => box.addEventListener("change", save));
+  resetButton.addEventListener("click", () => {
+    if (!confirm("Reset all checklist ticks?")) return;
+    checkboxes.forEach((box) => { box.checked = false; });
+    localStorage.removeItem(storageKey);
+    updateProgress();
+  });
+
+  restore();
+</script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyCTET — Sample Mock Test</title>
+<style>
+  :root{
+    --navy-950:#0F172A;
+    --navy-900:#1E293B;
+    --navy-800:#334155;
+    --navy-700:#475569;
+    --amber:#B45309;
+    --amber-light:#F59E0B;
+    --blue:#047857;
+    --ink-0:#F8FAFC;
+    --ink-300:#CBD5E1;
+    --ink-500:#94A3B8;
+    --good:#047857;
+    --bad:#DC2626;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--navy-950);
+    color:var(--ink-0);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:0 0 60px;
+  }
+  .app{
+    width:100%;
+    max-width:640px;
+    padding:20px 18px 0;
+  }
+
+  /* Header */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:18px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand-icon{
+    width:38px;height:38px;border-radius:10px;
+    background:var(--navy-800);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-icon svg{width:20px;height:20px;stroke:var(--ink-0);}
+  .brand-text .name{font-weight:700;font-size:1.05rem;letter-spacing:.2px;}
+  .brand-text .tagline{font-size:.66rem;color:var(--amber-light);margin-top:1px;}
+  .timer{
+    background:var(--navy-800);
+    border:1px solid var(--navy-700);
+    border-radius:10px;
+    padding:8px 14px;
+    font-variant-numeric:tabular-nums;
+    font-weight:700;
+    font-size:1rem;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    min-width:88px;
+    justify-content:center;
+  }
+  .timer.low{color:var(--bad);border-color:var(--bad);}
+  .timer svg{width:15px;height:15px;stroke:currentColor;flex-shrink:0;}
+  .home-link-top{color:var(--ink-300);font-size:.82rem;text-decoration:none;margin-left:auto;}
+  .home-link-top:hover{color:var(--ink-0);}
+
+  /* Progress */
+  .progress-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:10px;
+    font-size:.82rem;
+    color:var(--ink-300);
+  }
+  .progress-track{
+    height:5px;
+    background:var(--navy-800);
+    border-radius:3px;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--amber),var(--amber-light));
+    border-radius:3px;
+    transition:width .25s ease;
+  }
+  .initial-progress{width:4%;}
+
+  /* Intro screen */
+  .intro-card{
+    background:var(--navy-900);
+    border:1px solid var(--navy-800);
+    border-radius:var(--radius);
+    padding:26px 22px;
+  }
+  .intro-card h1{
+    font-size:1.32rem;
+    margin:0 0 6px;
+    line-height:1.3;
+  }
+  .intro-card p.sub{
+    color:var(--ink-300);
+    font-size:.92rem;
+    margin:0 0 22px;
+  }
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .stat{
+    background:var(--navy-800);
+    border-radius:10px;
+    padding:12px 10px;
+    text-align:center;
+  }
+  .stat .num{font-size:1.3rem;font-weight:700;color:var(--amber-light);}
+  .stat .lbl{font-size:.68rem;color:var(--ink-300);margin-top:2px;}
+  .subject-chip-row{
+    display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;
+  }
+  .chip{
+    background:var(--navy-800);
+    border:1px solid var(--navy-700);
+    border-radius:999px;
+    padding:6px 12px;
+    font-size:.78rem;
+    color:var(--ink-300);
+  }
+  .badge-row{
+    display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;
+  }
+  .badge{
+    font-size:.72rem;
+    padding:5px 10px;
+    border-radius:7px;
+    background:rgba(203,108,31,.15);
+    color:var(--amber-light);
+    border:1px solid rgba(203,108,31,.35);
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:none;
+    border-radius:10px;
+    padding:13px 20px;
+    font-size:.95rem;
+    font-weight:600;
+    cursor:pointer;
+    font-family:inherit;
+    transition:filter .15s ease, transform .1s ease;
+  }
+  .btn:active{transform:scale(.98);}
+  .btn-primary{background:var(--amber);color:#1a1002;width:100%;}
+  .btn-primary:hover{filter:brightness(1.08);}
+  .btn-ghost{background:transparent;color:var(--ink-300);border:1px solid var(--navy-700);}
+  .btn-ghost:hover{color:var(--ink-0);border-color:var(--ink-500);}
+  .review-btn{width:100%;margin-bottom:20px;}
+  .result-cta{text-decoration:none;display:inline-flex;}
+  .home-link{margin-top:14px;}
+  .home-link a{color:var(--ink-500);font-size:.82rem;text-decoration:none;}
+
+  /* Question card */
+  .q-card{
+    background:var(--navy-900);
+    border:1px solid var(--navy-800);
+    border-radius:var(--radius);
+    padding:22px 20px;
+    margin-bottom:18px;
+  }
+  .subject-pill{
+    display:inline-block;
+    font-size:.7rem;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:6px;
+    background:rgba(51,115,224,.16);
+    color:#8DB3F5;
+    border:1px solid rgba(51,115,224,.35);
+    margin-bottom:14px;
+  }
+  .q-text{
+    font-size:1.03rem;
+    line-height:1.55;
+    margin:0 0 20px;
+    white-space:pre-line;
+  }
+  .options{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .option{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:13px 14px;
+    border-radius:10px;
+    border:1px solid var(--navy-700);
+    background:var(--navy-800);
+    cursor:pointer;
+    font-size:.94rem;
+    line-height:1.4;
+  }
+  .option:hover{border-color:var(--ink-500);}
+  .option input{margin-top:2px;accent-color:var(--amber);flex-shrink:0;}
+  .option.selected{border-color:var(--amber);background:rgba(203,108,31,.12);}
+  .option.correct{border-color:var(--good);background:rgba(62,155,106,.14);}
+  .option.incorrect{border-color:var(--bad);background:rgba(194,74,74,.14);}
+
+  .nav-row{
+    display:flex;
+    gap:10px;
+  }
+  .nav-row .btn{flex:1;}
+
+  .explain{
+    margin-top:16px;
+    padding-top:16px;
+    border-top:1px dashed var(--navy-700);
+    font-size:.86rem;
+    color:var(--ink-300);
+    line-height:1.5;
+    display:none;
+  }
+  .explain.show{display:block;}
+  .explain b{color:var(--ink-0);}
+
+  /* Results screen */
+  .result-hero{
+    text-align:center;
+    padding:30px 20px 26px;
+    background:var(--navy-900);
+    border:1px solid var(--navy-800);
+    border-radius:var(--radius);
+    margin-bottom:18px;
+  }
+  .result-hero .score{
+    font-size:2.6rem;
+    font-weight:800;
+    color:var(--amber-light);
+    line-height:1;
+  }
+  .result-hero .score span{font-size:1.2rem;color:var(--ink-500);font-weight:600;}
+  .result-hero .score-label{color:var(--ink-300);font-size:.85rem;margin-top:8px;}
+  .subject-breakdown{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin:22px 0 4px;
+    text-align:left;
+  }
+  .sb-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:.85rem;
+  }
+  .sb-row .sb-name{width:130px;flex-shrink:0;color:var(--ink-300);}
+  .sb-row .sb-bar{
+    flex:1;height:8px;border-radius:4px;background:var(--navy-800);overflow:hidden;
+  }
+  .sb-row .sb-bar-fill{height:100%;background:var(--blue);border-radius:4px;}
+  .sb-row .sb-score{width:38px;text-align:right;color:var(--ink-0);font-weight:600;}
+
+  .review-item{
+    background:var(--navy-900);
+    border:1px solid var(--navy-800);
+    border-radius:var(--radius);
+    padding:18px 18px;
+    margin-bottom:12px;
+  }
+  .review-item .q-num-tag{
+    font-size:.72rem;color:var(--ink-500);margin-bottom:8px;
+  }
+  .cta-footer{
+    margin-top:26px;
+    text-align:center;
+    padding:22px 18px;
+    background:var(--navy-900);
+    border:1px solid var(--navy-800);
+    border-radius:var(--radius);
+  }
+  .cta-footer .sanskrit{
+    color:var(--amber-light);
+    font-size:.85rem;
+    margin-bottom:4px;
+  }
+  .cta-footer p{color:var(--ink-300);font-size:.88rem;margin:6px 0 16px;}
+
+  .hidden{display:none !important;}
+
+  @media (max-width:420px){
+    .stat-grid{grid-template-columns:repeat(3,1fr);}
+    .brand-text .name{font-size:.95rem;}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 6.5C2 5.7 2.7 5 3.5 5H10a3 3 0 0 1 3 3v11a2.5 2.5 0 0 0-2.5-2.5H2Z"/>
+          <path d="M22 6.5C22 5.7 21.3 5 20.5 5H14a3 3 0 0 0-3 3v11a2.5 2.5 0 0 1 2.5-2.5H22Z"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="name">EasyCTET</div>
+        <div class="tagline">सा विद्या या विमुक्तये</div>
+      </div>
+    </div>
+    <a class="home-link-top" href="index.html">Home</a>
+    <div class="timer" id="timerBox">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9 2h6"/></svg>
+      <span id="timerText">25:00</span>
+    </div>
+  </header>
+
+  <!-- INTRO SCREEN -->
+  <section id="introScreen">
+    <div class="intro-card">
+      <h1>Primary School Educator — Sample Mock Test</h1>
+      <p class="sub">A quick 25-question preview across all 5 CTET Paper 1 subjects — the exact style and pacing you'll get in the full app.</p>
+
+      <div class="stat-grid">
+        <div class="stat"><div class="num">25</div><div class="lbl">Questions</div></div>
+        <div class="stat"><div class="num">25:00</div><div class="lbl">Time Limit</div></div>
+        <div class="stat"><div class="num">25</div><div class="lbl">Total Marks</div></div>
+      </div>
+
+      <div class="subject-chip-row">
+        <span class="chip">CDP · 5 Q</span>
+        <span class="chip">English · 5 Q</span>
+        <span class="chip">Hindi · 5 Q</span>
+        <span class="chip">Maths · 5 Q</span>
+        <span class="chip">EVS · 5 Q</span>
+      </div>
+
+      <div class="badge-row">
+        <span class="badge">1 min / question — standard CTET timing</span>
+        <span class="badge">1 mark each · no negative marking</span>
+        <span class="badge">100% offline · zero telemetry</span>
+      </div>
+
+      <button class="btn btn-primary" onclick="startTest()">Start Sample Test</button>
+    </div>
+  </section>
+
+  <!-- QUIZ SCREEN -->
+  <section id="quizScreen" class="hidden">
+    <div class="progress-row">
+      <span id="qCounter">Question 1 of 25</span>
+      <span id="markCounter">1 mark</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill initial-progress" id="progressFill"></div></div>
+
+    <div class="q-card">
+      <span class="subject-pill" id="subjectPill">CDP</span>
+      <p class="q-text" id="qText"></p>
+      <div class="options" id="optionsBox"></div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-ghost" id="prevBtn" onclick="goPrev()">Back</button>
+      <button class="btn btn-primary" id="nextBtn" onclick="goNext()">Next</button>
+    </div>
+  </section>
+
+  <!-- RESULTS SCREEN -->
+  <section id="resultScreen" class="hidden">
+    <div class="result-hero">
+      <div class="score"><span id="scoreVal">0</span><span>/25</span></div>
+      <div class="score-label">marks scored · no negative marking applied</div>
+      <div class="subject-breakdown" id="subjectBreakdown"></div>
+    </div>
+
+    <button class="btn btn-ghost review-btn" onclick="showReview()">Review All Answers &amp; Explanations</button>
+
+    <div id="reviewList"></div>
+
+    <div class="cta-footer">
+      <div class="sanskrit">सा विद्या या विमुक्तये</div>
+      <p>This was 25 of 750+ questions in the full question bank. Get unlimited practice, study guides, and audio masterclasses — 100% offline, zero telemetry.</p>
+      <a href="mailto:support@easyctet.in?subject=EasyCTET%20launch%20updates" class="btn btn-primary result-cta">Get launch updates</a>
+      <div class="home-link"><a href="index.html">← Back to EasyCTET home</a></div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+const QUESTIONS = [
+  {subject:"CDP", topic:"Jean Piaget", text:"Nine-month-old Ishaan watches his mother hide a rattle under a cushion. He immediately pushes the cushion aside to retrieve it. This behaviour indicates that Ishaan has developed:", options:{1:"Conservation",2:"Object permanence",3:"Reversibility",4:"Egocentrism"}, correct:"2", explanation:"Object permanence, the understanding that objects continue to exist even when out of sight, typically emerges in the later part of the sensorimotor stage. Conservation and reversibility belong to the concrete operational stage, and egocentrism describes an inability to take another's perspective, not memory for hidden objects."},
+  {subject:"CDP", topic:"Lev Vygotsky", text:"According to Vygotsky, the most effective learning tasks for a student are those that are:", options:{1:"Well within what the student can already do independently",2:"Far beyond what the student can do even with maximum support",3:"Just beyond what the student can do alone, but achievable with guidance",4:"Identical in difficulty regardless of the student's current level"}, correct:"3", explanation:"The Zone of Proximal Development is the gap between independent performance and what can be achieved with the guidance of a more knowledgeable other; tasks in this zone, neither too easy nor impossible, are where meaningful learning occurs."},
+  {subject:"CDP", topic:"Moral Development", text:"At which level of Kohlberg's theory do children typically decide right and wrong mainly based on whether an action leads to punishment or reward, without a full understanding of the rules set by society?", options:{1:"Post-conventional level",2:"Conventional level",3:"Pre-conventional level",4:"Formal operational level"}, correct:"3", explanation:"The pre-conventional level is self-centred, with moral reasoning driven mainly by anticipated punishment or personal reward, before children fully grasp society's rules as legitimate or binding."},
+  {subject:"CDP", topic:"Principles of Development", text:"An infant gains control over holding up her head and moving her arms well before she can walk. This developmental sequence illustrates the:", options:{1:"Proximodistal principle",2:"Cephalocaudal principle",3:"Principle of hierarchical integration",4:"General-to-specific principle only"}, correct:"2", explanation:"The cephalocaudal principle describes development proceeding from head to toe, so head and upper-body control develops before control of the legs and feet."},
+  {subject:"CDP", topic:"Motor Development", text:"Which of the following is an example of a gross motor skill?", options:{1:"Buttoning a shirt",2:"Threading small beads onto a string",3:"Climbing a set of stairs",4:"Cutting neatly along a curved outline"}, correct:"3", explanation:"Gross motor skills involve large muscle groups and whole-body coordination, such as climbing, running, or jumping. Buttoning, threading beads, and precise cutting are fine motor skills requiring small-muscle precision."},
+
+  {subject:"English", topic:"Assessment & Evaluation", text:"Ms. Shalini, an elementary English teacher, systematically compiles each child's self-drawn story maps, creative free-writing drafts, spelling reflection logs, and audio recordings of oral recitation over an academic term to observe individual language growth. This cumulative diagnostic record is termed a:", options:{1:"Summative report card",2:"Language learning portfolio",3:"Norm-referenced achievement profile",4:"Standardised aptitude ledger"}, correct:"2", explanation:"A portfolio is a purposeful, longitudinal collection of authentic student work that illustrates developmental progress, metacognitive reflection, and communicative efforts over time."},
+  {subject:"English", topic:"Reading Pedagogy", text:"Consider the following two statements regarding reading pedagogy:\nStatement I: Reading is fundamentally a mechanical process of phonics-based decoding of printed graphic marks.\nStatement II: Proficient reading is an active cognitive process of meaning construction and contextual interpretation.\nWhich of the following evaluations is correct?", options:{1:"Both Statement I and Statement II are true",2:"Both Statement I and Statement II are false",3:"Statement I is false, but Statement II is true",4:"Statement I is true, but Statement II is false"}, correct:"3", explanation:"Contemporary language pedagogy establishes that reading is not merely mechanical symbol decoding (Statement I is false); true reading requires active comprehension, schema activation, and meaning construction (Statement II is true)."},
+  {subject:"English", topic:"Writing Pedagogy", text:"In the process approach to writing, what is the primary pedagogical function of the 'pre-writing' stage?", options:{1:"Proofreading punctuation, capitalization, and typographical errors",2:"Brainstorming ideas, activating background knowledge, and generating potential topics",3:"Formatting the finished piece for public display or publication",4:"Evaluating the draft against formal grading rubrics"}, correct:"2", explanation:"The pre-writing stage involves ideation, brainstorming, mind-mapping, and outlining ideas before creating a first draft. Proofreading and editing occur in later stages."},
+  {subject:"English", topic:"Classroom Environment", text:"A primary teacher decorates her classroom walls with labelled object charts, children's big-book story murals, a classroom reading corner with illustrated magazines, and bilingual sentence strips. In second language acquisition, this classroom design is known as an:", options:{1:"Audiolingual drill laboratory",2:"Input-rich / print-rich environment",3:"Explicit syntactic immersion chamber",4:"Exclusive translation workshop"}, correct:"2", explanation:"An input-rich or print-rich environment provides incidental and meaningful exposure to printed language, visual cues, and contextual symbols, reinforcing natural second language acquisition."},
+  {subject:"English", topic:"Teaching Methodology", text:"A Class II English teacher gives verbal commands such as 'Stand up tall', 'Touch your knees', and 'Point to the window' while acting them out. The learners immediately perform the physical actions without being pressured to speak. Which teaching methodology is the instructor utilizing?", options:{1:"Grammar-Translation Method",2:"The Direct Method",3:"Total Physical Response (TPR)",4:"Structural-Situational Approach"}, correct:"3", explanation:"James Asher's Total Physical Response (TPR) links auditory language input with physical motor responses during a learner's initial 'silent period' before oral production is expected."},
+
+  {subject:"Hindi", topic:"भाषा अर्जन बनाम अधिगम", text:"भाषा अर्जन (Language Acquisition) के संदर्भ में कौन-सा कथन सर्वाधिक उपयुक्त और सत्य है?", options:{1:"यह केवल विद्यालय में औपचारिक नियमों को रटने से होता है।",2:"यह एक स्वाभाविक एवं अचेतन प्रक्रिया है, जो समृद्ध भाषिक परिवेश में स्वतः घटित होती है।",3:"इसमें व्याकरण की पुस्तकों का निरंतर अभ्यास अनिवार्य शर्त है।",4:"यह केवल पुरस्कार और दंड के माध्यम से संभव है।"}, correct:"2", explanation:"भाषा अर्जन एक अनौपचारिक, सहज एवं स्वाभाविक प्रक्रिया है जिसमें बालक अपने आस-पास के वातावरण से अनायास ही भाषा ग्रहण कर लेता है।"},
+  {subject:"Hindi", topic:"भाषा अर्जन बनाम अधिगम", text:"प्राथमिक स्तर पर बच्चे अपनी मातृभाषा को बिना किसी औपचारिक व्याकरणिक नियमों की सहायता के सहज एवं स्वाभाविक रूप से सीख लेते हैं। यह प्रक्रिया क्या कहलाती है?", options:{1:"भाषा अधिगम (Language Learning)",2:"भाषा अर्जन (Language Acquisition)",3:"भाषा रूपांतरण (Language Transfer)",4:"भाषा व्याघात (Language Interference)"}, correct:"2", explanation:"भाषा अर्जन एक स्वाभाविक, सहज और अचेतन प्रक्रिया है जो प्राकृतिक परिवेश और परिवार में घटित होती है। विद्यालय में औपचारिक नियमों के साथ सीखना भाषा अधिगम कहलाता है।"},
+  {subject:"Hindi", topic:"प्रिंट-समृद्ध वातावरण", text:"कक्षा में 'प्रिंट-समृद्ध वातावरण' (Print-Rich Classroom Environment) तैयार करने से क्या तात्पर्य है?", options:{1:"दीवारों पर सुंदर पेंटिंग और महंगे पोस्टर लगाना",2:"कक्षा में बच्चों के बनाए चित्र, बाल-कहानियाँ, चार्ट और लेबल इस प्रकार लगाना कि वे बच्चों की दृष्टि में सहज उपलब्ध हों",3:"केवल मुद्रित पाठ्यपुस्तकों का ढेर लगाना",4:"कक्षा को पूरी तरह शांत रखना"}, correct:"2", explanation:"प्रिंट-समृद्ध परिवेश बच्चों को मुद्रित भाषा के साथ बार-बार अंतःक्रिया करने का अवसर देता है, जिससे उनकी मुद्रित चेतना (Print Awareness) विकसित होती है।"},
+  {subject:"Hindi", topic:"पठन अक्षमता", text:"यदि एक बालक पढ़ते समय 'saw' को 'was' या 'ब' को 'द' पढ़ता है तथा शब्दों और वर्णों को पहचानने में निरंतर कठिनाई महसूस करता है, तो वह किससे ग्रसित हो सकता है?", options:{1:"डिस्कैल्कुलिया (गणितीय विकार)",2:"डिस्लेक्सिया (पठन विकार)",3:"डिस्ग्राफिया (लेखन विकार)",4:"एडीएचडी (अतिसक्रियता)"}, correct:"2", explanation:"डिस्लेक्सिया (Dyslexia) एक भाषा-आधारित अधिगम अक्षमता है जो मुख्य रूप से वर्ण-ध्वनि संबंध और पठन प्रवाह को प्रभावित करती है।"},
+  {subject:"Hindi", topic:"सस्वर बनाम मौन पठन", text:"प्राथमिक स्तर के पश्चात उच्च प्राथमिक स्तर पर मौन पठन (Silent Reading) को प्रोत्साहित करने का प्रमुख कारण क्या है?", options:{1:"कक्षा में बिल्कुल शांति बनाए रखना ताकि शिक्षक विश्राम कर सके",2:"पठन गति में वृद्धि करना तथा गहन अर्थ-ग्रहण (अर्थ-निर्माण) की क्षमता बढ़ाना",3:"बच्चों के बोलने की शक्ति को कम करना",4:"केवल परीक्षा में बैठने की औपचारिकता पूरी करना"}, correct:"2", explanation:"मौन पठन में होठों की हलचल नहीं होती, जिससे ऊर्जा बचती है, पठन गति तीव्र होती है और पाठक पाठ के भाव व गहन अर्थ पर एकाग्र हो पाता है।"},
+
+  {subject:"Maths", topic:"Place Value", text:"Find the difference between the place value of the digit 8 and the place value of the digit 3 in the number 5,83,927.", options:{1:"77,000",2:"7,700",3:"80,300",4:"79,700"}, correct:"1", explanation:"In 5,83,927, the digit 8 is in the ten-thousands place, so its place value is 80,000; the digit 3 is in the thousands place, so its place value is 3,000. The difference is 80,000 - 3,000 = 77,000."},
+  {subject:"Maths", topic:"Maths Pedagogy", text:"(A) Mathematics helps develop creativity and imagination in children.\n(B) Mathematics provides a basis for learning in other subjects.\n(C) Mathematics at the primary level should be based on formal deductive proof from the outset.\nWhich of the above statements most appropriately describe the nature of mathematics at the primary level?", options:{1:"(A) and (B) only",2:"(A) and (C) only",3:"(B) and (C) only",4:"(A), (B) and (C)"}, correct:"1", explanation:"Primary-level mathematics should nurture creativity, imagination, and serve as a foundation for other subjects. Formal deductive proof is a feature of higher, later-stage mathematics and is developmentally inappropriate at the primary level."},
+  {subject:"Maths", topic:"Number System", text:"What is the predecessor of the smallest 4-digit number?", options:{1:"999",2:"1,001",3:"1,000",4:"998"}, correct:"1", explanation:"The smallest 4-digit number is 1,000. Its predecessor is 1,000 - 1 = 999."},
+  {subject:"Maths", topic:"Number Patterns", text:"Find the next term in the sequence: 1, 3, 6, 10, 15, ___", options:{1:"21",2:"18",3:"20",4:"22"}, correct:"1", explanation:"This is the triangular number sequence, where the difference increases by 1 each time (2, 3, 4, 5, 6). The next term is 15 + 6 = 21."},
+  {subject:"Maths", topic:"Fractions", text:"Which of the following statements about fractions is FALSE?", options:{1:"A fraction always represents a quantity greater than 1",2:"A fraction can represent a part of a whole",3:"A fraction can represent a division problem",4:"A proper fraction represents a quantity less than 1"}, correct:"1", explanation:"This statement is false because proper fractions, such as 1/2 or 3/4, represent quantities less than 1. Fractions can represent quantities less than, equal to, or greater than 1."},
+
+  {subject:"EVS", topic:"Geography & Directions", text:"With respect to Gujarat, the locations of Madhya Pradesh and Maharashtra respectively are:", options:{1:"East; South",2:"West; North",3:"North; East",4:"South; West"}, correct:"1", explanation:"Madhya Pradesh lies to the East of Gujarat, and Maharashtra lies to the South of Gujarat."},
+  {subject:"EVS", topic:"Animals & Adaptation", text:"Goats have short front teeth and large, flat side teeth. This dental layout is designed for:", options:{1:"Snipping (cutting) grass and chewing grass, respectively",2:"Chewing grass and snipping grass, respectively",3:"Gnawing grass and cutting grass, respectively",4:"Cutting grass and gnawing grass, respectively"}, correct:"1", explanation:"Short front teeth are used to snip or bite off grass, while the large, flat back teeth are designed to grind and chew the grass."},
+  {subject:"EVS", topic:"Health & Nutrition", text:"Read the following statements:\nStatement I: Due to anaemia, children may not grow well and their energy levels may be low.\nStatement II: Anaemia affects both children's physical and mental wellbeing.\nWhich of the following is correct?", options:{1:"Both I and II are true",2:"I is true but II is false",3:"I is false but II is true",4:"Both I and II are false"}, correct:"1", explanation:"Iron-deficiency anaemia reduces oxygen transport in the body, lowering energy levels and retarding physical growth, while also adversely affecting cognitive attention and mental wellbeing. Both statements are true."},
+  {subject:"EVS", topic:"Traditional Culture", text:"Which of the following is considered the best period of the year for starting a beekeeping programme in Bihar?", options:{1:"October to December",2:"February to April",3:"April to June",4:"August to October"}, correct:"1", explanation:"October to December coincides with the flowering season and is favourable for queen bee activity, making it an ideal period for beekeeping in Bihar."},
+  {subject:"EVS", topic:"EVS Pedagogy", text:"A teacher wants to select synchronous communication tools for teaching EVS remotely. Which of the following will she choose?", options:{1:"Video conferencing, online chat sessions, phone calls",2:"E-mail, social media posts, recorded messages",3:"Instant messaging, blogs, pre-recorded videos",4:"Pre-recorded videos, phone calls, blogs"}, correct:"1", explanation:"Synchronous communication happens in real time. Video conferencing, live online chat sessions, and phone calls are all real-time, synchronous interaction media."}
+];
+
+const TOTAL_SECONDS = 25 * 60;
+let current = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let remaining = TOTAL_SECONDS;
+let timerInterval = null;
+
+function startTest(){
+  document.getElementById('introScreen').classList.add('hidden');
+  document.getElementById('quizScreen').classList.remove('hidden');
+  renderQuestion();
+  timerInterval = setInterval(tick, 1000);
+}
+
+function tick(){
+  remaining--;
+  updateTimerDisplay();
+  if(remaining <= 0){
+    clearInterval(timerInterval);
+    finishTest();
+  }
+}
+
+function updateTimerDisplay(){
+  const m = Math.floor(remaining/60).toString().padStart(2,'0');
+  const s = (remaining%60).toString().padStart(2,'0');
+  document.getElementById('timerText').textContent = m+':'+s;
+  const box = document.getElementById('timerBox');
+  if(remaining <= 120){ box.classList.add('low'); } else { box.classList.remove('low'); }
+}
+
+function renderQuestion(){
+  const q = QUESTIONS[current];
+  document.getElementById('subjectPill').textContent = q.subject;
+  document.getElementById('qText').textContent = q.text;
+  document.getElementById('qCounter').textContent = `Question ${current+1} of ${QUESTIONS.length}`;
+  document.getElementById('markCounter').textContent = `1 mark`;
+  document.getElementById('progressFill').style.width = ((current+1)/QUESTIONS.length*100)+'%';
+
+  const box = document.getElementById('optionsBox');
+  box.innerHTML = '';
+  Object.keys(q.options).forEach(key=>{
+    const label = document.createElement('label');
+    label.className = 'option' + (answers[current]===key ? ' selected':'');
+    label.innerHTML = `<input type="radio" name="opt" value="${key}" ${answers[current]===key?'checked':''}/> <span>${q.options[key]}</span>`;
+    label.onclick = () => { answers[current]=key; renderQuestion(); };
+    box.appendChild(label);
+  });
+
+  document.getElementById('prevBtn').style.visibility = current===0 ? 'hidden' : 'visible';
+  document.getElementById('nextBtn').textContent = current === QUESTIONS.length-1 ? 'Submit Test' : 'Next';
+}
+
+function goPrev(){
+  if(current>0){ current--; renderQuestion(); }
+}
+function goNext(){
+  if(current < QUESTIONS.length-1){
+    current++;
+    renderQuestion();
+  } else {
+    clearInterval(timerInterval);
+    finishTest();
+  }
+}
+
+function finishTest(){
+  document.getElementById('quizScreen').classList.add('hidden');
+  document.getElementById('resultScreen').classList.remove('hidden');
+
+  let score = 0;
+  const subjectStats = {};
+  QUESTIONS.forEach((q,i)=>{
+    if(!subjectStats[q.subject]) subjectStats[q.subject] = {correct:0,total:0};
+    subjectStats[q.subject].total++;
+    if(answers[i] === q.correct){
+      score++;
+      subjectStats[q.subject].correct++;
+    }
+  });
+
+  document.getElementById('scoreVal').textContent = score;
+
+  const sb = document.getElementById('subjectBreakdown');
+  sb.innerHTML = '';
+  Object.keys(subjectStats).forEach(subj=>{
+    const st = subjectStats[subj];
+    const pct = (st.correct/st.total*100);
+    const row = document.createElement('div');
+    row.className='sb-row';
+    row.innerHTML = `<span class="sb-name">${subj}</span><span class="sb-bar"><span class="sb-bar-fill" style="width:${pct}%;"></span></span><span class="sb-score">${st.correct}/${st.total}</span>`;
+    sb.appendChild(row);
+  });
+
+  buildReview();
+}
+
+function buildReview(){
+  const list = document.getElementById('reviewList');
+  list.innerHTML = '';
+  QUESTIONS.forEach((q,i)=>{
+    const item = document.createElement('div');
+    item.className = 'review-item hidden';
+    item.id = 'review-'+i;
+    const userAns = answers[i];
+    let optsHtml = '';
+    Object.keys(q.options).forEach(key=>{
+      let cls = 'option';
+      if(key === q.correct) cls += ' correct';
+      else if(key === userAns && userAns !== q.correct) cls += ' incorrect';
+      optsHtml += `<div class="${cls}"><span>${q.options[key]}</span></div>`;
+    });
+    item.innerHTML = `
+      <div class="q-num-tag">${q.subject} · Q${i+1}${userAns===null ? ' · Not answered' : ''}</div>
+      <p class="q-text">${q.text}</p>
+      <div class="options">${optsHtml}</div>
+      <div class="explain show"><b>Explanation:</b> ${q.explanation}</div>
+    `;
+    list.appendChild(item);
+  });
+}
+
+function showReview(){
+  document.querySelectorAll('.review-item').forEach(el=>el.classList.remove('hidden'));
+  document.querySelector('#resultScreen button.btn-ghost').classList.add('hidden');
+}
+</script>
+</body>
+</html>
