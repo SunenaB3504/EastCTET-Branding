@@ -79,6 +79,288 @@ The brand employs an intentional two-token gold and green system to ensure stric
 | **Canvas Background** | **Warm Ivory** | `#F8FAFC` | `rgb(248, 250, 252)` | Far gentler on tired eyes than harsh pure white (`#FFFFFF`). Reduces screen fatigue. |
 | **Deep Night Canvas** | **Midnight Slate** | `#0F172A` | `rgb(15, 23, 42)` | For night study; rich OLED slate-black with navy undertone, not flat gray. |
 
+## 3.2 Approved Logo Asset: Open Dawn Symbol
+
+The **Open Dawn** symbol represents knowledge opening a path toward liberation:
+
+- The rounded arch represents possibility, aspiration, and an open future.
+- The central rising path represents growth, progress, and liberating understanding.
+- The two lower curves represent an open book and the foundation of knowledge.
+
+The logo is a refined primary symbol. A separate simplified three-stroke version must be used for very small surfaces such as notification icons and favicons. Do not redraw or add decorative details to the approved symbol.
+
+### Turmeric Gold SVG
+
+Use this transparent vector when the logo appears on a dark navy or Midnight Slate background. The asset uses the brand's Turmeric Gold accent (`#F59E0B`).
+
+```svg
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EasyCTET Turmeric Gold Logo">
+  <g stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 56V35a22 22 0 0 1 44 0v21" />
+    <path d="M50 86V28" />
+    <path d="M38 40l12-12 12 12" />
+    <path d="M14 62c16 0 30 4 36 12 6-8 20-12 36-12" />
+    <path d="M14 74c16 0 30 4 36 12 6-8 20-12 36-12" />
+  </g>
+</svg>
+```
+
+### Heritage Navy SVG
+
+Use this transparent vector on Warm Ivory, white, or other light backgrounds. The asset uses Heritage Navy (`#1E293B`) for strong contrast and should be the default light-background logo.
+
+```svg
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EasyCTET Heritage Navy Logo">
+  <g stroke="#1E293B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 56V35a22 22 0 0 1 44 0v21" />
+    <path d="M50 86V28" />
+    <path d="M38 40l12-12 12 12" />
+    <path d="M14 62c16 0 30 4 36 12 6-8 20-12 36-12" />
+    <path d="M14 74c16 0 30 4 36 12 6-8 20-12 36-12" />
+  </g>
+</svg>
+```
+
+### White SVG
+
+Use this transparent vector on Heritage Navy, Midnight Slate, or other dark backgrounds. It is the inverse light treatment of the primary symbol.
+
+```svg
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EasyCTET White Logo">
+  <g stroke="#F8FAFC" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 56V35a22 22 0 0 1 44 0v21" />
+    <path d="M50 86V28" />
+    <path d="M38 40l12-12 12 12" />
+    <path d="M14 62c16 0 30 4 36 12 6-8 20-12 36-12" />
+    <path d="M14 74c16 0 30 4 36 12 6-8 20-12 36-12" />
+  </g>
+</svg>
+```
+
+### Black Monochrome SVG
+
+Use this single-colour vector for photocopying, stamps, embossing, black-and-white documents, and light-background print work. This is the canonical black asset; duplicate exports should not be treated as separate logo variants.
+
+```svg
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EasyCTET Black Monochrome Logo">
+  <g stroke="#000000" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 56V35a22 22 0 0 1 44 0v21" />
+    <path d="M50 86V28" />
+    <path d="M38 40l12-12 12 12" />
+    <path d="M14 62c16 0 30 4 36 12 6-8 20-12 36-12" />
+    <path d="M14 74c16 0 30 4 36 12 6-8 20-12 36-12" />
+  </g>
+</svg>
+```
+
+### Simplified App Icon and Favicon SVG
+
+Use this simplified symbol for small surfaces where the refined symbol becomes crowded: Android launcher icon, favicon, notification icon, small social avatar, and watermark. It intentionally removes the lower book curve while preserving the arch, rising path, and one clear book curve.
+
+```svg
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EasyCTET App Icon and Favicon">
+  <g stroke="#1E293B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 56V35a22 22 0 0 1 44 0v21" />
+    <path d="M50 74V28" />
+    <path d="M38 40l12-12 12 12" />
+    <path d="M14 62c16 0 30 4 36 12 6-8 20-12 36-12" />
+  </g>
+</svg>
+```
+
+For dark small surfaces, recolour the simplified asset to Turmeric Gold (`#F59E0B`) or Warm Ivory (`#F8FAFC`). For a favicon or notification icon, use one colour only and omit the wordmark and Sanskrit line.
+
+### Logo Usage Rules
+
+| Context | Approved asset | Colour / treatment |
+| :--- | :--- | :--- |
+| Website or app on Warm Ivory/light background | Refined primary symbol | Heritage Navy `#1E293B` |
+| Website hero or app surface on Midnight Slate/navy | Refined primary symbol | Turmeric Gold `#F59E0B` or Warm Ivory `#F8FAFC` |
+| Full-size social or print artwork | Refined primary symbol | Navy, gold, white, or black according to background |
+| Android launcher icon | Simplified small-size symbol | Gold on navy, white on navy, or navy on ivory |
+| Favicon and notification icon | Simplified three-stroke symbol | Single colour only; no wordmark or Sanskrit line |
+| Photocopy, stamp, or low-cost print | Monochrome symbol | Pure black or pure white |
+| Brand lockup | Symbol beside `EasyCTET` | Keep the Sanskrit philosophy line separate from the icon |
+
+### Logo Restrictions
+
+- Do not use Turmeric Gold on a white background as the primary treatment; contrast is weak at small sizes.
+- Do not place the symbol inside a government-style seal, shield, or official-looking badge.
+- Do not place `CTET` inside the symbol.
+- Do not add gradients, shadows, fills, textures, rays, pencils, graduation caps, trophies, or extra decorative paths.
+- Do not stretch, rotate, crop, or change the stroke proportions.
+- Do not use the refined symbol at 16px if the simplified small-size version is available.
+- Keep clear space around the mark equal to at least the visual height of the central arch at normal display sizes.
+- Test every export at 16px, 24px, 32px, and 48px before publishing.
+
+## 3.3 Brand Name and Tagline System
+
+### Approved Brand Name
+
+The official brand name is:
+
+> **EasyCTET**
+
+Use this exact spelling and capitalisation everywhere. `Easy` is title case and `CTET` is uppercase because it identifies the examination category.
+
+Do not use `EasyCETE`, `Easy CTET`, `easyCTET`, `EasyCTET Official`, or `CBSE EasyCTET` in the brand identity, app title, social handles, or promotional material.
+
+The wordmark must remain separate from the symbol. Do not place `CTET` inside the Open Dawn mark and do not style the name to resemble a government or examination-authority seal.
+
+### Sanskrit Philosophy Line
+
+Use this exact Devanagari text:
+
+> **सा विद्या या विमुक्तये**
+
+Transliteration:
+
+> *Sā vidyā yā vimuktaye*
+
+Preferred English meaning:
+
+> **Knowledge is that which liberates.**
+
+This is the brand's philosophical line. It communicates the belief that learning should create understanding and freedom, not only memorisation or exam tactics.
+
+### Seasonal Product Tagline
+
+Use this exact English tagline for the current Paper 1 season:
+
+> **Serious CTET Paper 1 prep, simplified.**
+
+This is the customer-facing product promise. It should appear in launch communication, the website hero, app introduction, store creative, and campaign materials where space allows.
+
+### Lockup Hierarchy
+
+For the complete brand lockup, use this order:
+
+```text
+[Open Dawn symbol] EasyCTET
+सा विद्या या विमुक्तये
+```
+
+For product and campaign communication, use:
+
+```text
+EasyCTET
+Serious CTET Paper 1 prep, simplified.
+```
+
+Do not combine the Sanskrit line and English tagline into one crowded line. The Sanskrit line expresses the philosophy; the English tagline explains the current product.
+
+### Name and Tagline Usage
+
+| Context | Use | Notes |
+| :--- | :--- | :--- |
+| Website hero | `EasyCTET` + seasonal English tagline | Keep the Paper 1 scope visible in supporting copy |
+| Website header | Symbol + `EasyCTET` | Sanskrit line optional when space permits |
+| Android app icon | Symbol only | No wordmark, Sanskrit line, or English tagline |
+| App onboarding | Symbol + `EasyCTET` + Sanskrit line | Add the English seasonal tagline on the introduction screen |
+| Play Store title | `EasyCTET: CTET Paper 1 Prep` | Do not imply CBSE affiliation |
+| Play Store short description | Seasonal tagline or a concise Paper 1 benefit | Name the five current subjects where space permits |
+| Social profile | `EasyCTET | CTET Paper 1 Preparation` | Keep the profile description factual |
+| Social post or video | `EasyCTET` + seasonal English tagline | Use the Sanskrit line as a closing brand signature when appropriate |
+| Printed worksheet or study guide | Symbol + `EasyCTET` | Use Sanskrit line on the cover or footer, not inside question content |
+| Legal pages and support | `EasyCTET` | Use the legal operator identity where required |
+
+### Non-Affiliation Rule
+
+Because `CTET` is associated with the Central Board of Secondary Education (CBSE), include this statement in the website, app information, store listing, and other appropriate public materials:
+
+> **EasyCTET is an independent preparation platform and is not affiliated with, endorsed by, or sponsored by CBSE or the CTET examination authority.**
+
+Never use the CBSE logo, official seal, government emblem, or wording such as `Official CTET`, `CBSE-approved`, or `CBSE authorised` unless formal written permission exists.
+
+## 3.4 Logo Lockup, Typography, and Scale Specifications
+
+These measurements define the starting production system for the Open Dawn symbol, `EasyCTET` wordmark, and tagline. Small optical adjustments are allowed when needed for visual balance, but the relationship between the elements must remain consistent.
+
+### Logo Construction Unit
+
+Use the visible height of the refined symbol as the base unit **H**. In the supplied `0 0 100 100` viewBox, the visible symbol is approximately 71 units high, from the top of the arch to the lowest book curve.
+
+- **Symbol reference height:** `H`
+- **Minimum clear space:** `0.25H` on every side
+- **Horizontal lockup gap:** `0.22H` between symbol and wordmark
+- **Stacked lockup gap:** `0.10H` between the wordmark and Sanskrit line
+- **Do not place other text, borders, or graphic elements inside the clear space**
+
+The clear-space rule is more important than a fixed pixel size. Scale the complete lockup proportionally; never stretch the symbol or wordmark independently.
+
+### Wordmark Specification
+
+- **Text:** `EasyCTET`
+- **Primary font:** Outfit SemiBold (`600`)
+- **Fallback:** Outfit Medium (`500`) if SemiBold appears too heavy at small sizes
+- **Letter spacing:** `0` for normal use; maximum `0.01em` for small uppercase-adjacent environments
+- **Case:** Title case with uppercase `E`, `C`, `T`, `E`, `T` as shown in `EasyCTET`
+- **Colour on light backgrounds:** Heritage Navy `#1E293B`
+- **Colour on dark backgrounds:** Warm Ivory `#F8FAFC`
+- **Accent option:** Turmeric Gold `#F59E0B` only when the full lockup is on a dark surface
+
+Relative to the symbol:
+
+- **Horizontal lockup wordmark cap height:** approximately `0.38H`
+- **Stacked lockup wordmark cap height:** approximately `0.42H`
+- **Wordmark width:** allowed to grow naturally; do not horizontally compress it to force alignment
+- **Baseline:** optically centre the wordmark against the symbol's visual centre, not its mathematical bounding box
+
+For final production exports, convert the wordmark to outlined paths or embed the approved font asset. Do not rely on an uninstalled system font for a critical logo lockup.
+
+### Sanskrit Line Specification
+
+- **Text:** `सा विद्या या विमुक्तये`
+- **Font:** Noto Sans Devanagari Regular (`400`)
+- **Weight:** Regular; do not use a heavy Devanagari weight below 18px
+- **Letter spacing:** `0`
+- **Colour on light backgrounds:** Deep Gold `#B45309` or Heritage Navy `#1E293B`
+- **Colour on dark backgrounds:** Warm Ivory `#F8FAFC` or Turmeric Gold `#F59E0B`
+- **Alignment:** align optically with the wordmark, not necessarily with the symbol's outer edge
+
+Relative to the wordmark:
+
+- **Sanskrit line cap height:** approximately `0.30` to `0.34` of the wordmark cap height
+- **Gap below wordmark:** approximately `0.10H`
+- **Maximum Sanskrit line width:** approximately the wordmark width; do not allow it to dominate the brand name
+
+### Digital Size Recommendations
+
+These are recommended starting sizes for the complete lockup. Adapt to the surrounding layout while preserving the proportions above.
+
+| Surface | Symbol height | Wordmark size | Sanskrit size | Notes |
+| :--- | :---: | :---: | :---: | :--- |
+| Website desktop header | 32px | 20px | Optional, 9px | Use symbol + wordmark; omit Sanskrit if crowded |
+| Website mobile header | 28px | 18px | Omit | Prioritise recognition and navigation space |
+| Website hero lockup | 96–128px | 38–52px | 14–18px | Use full lockup only when there is room |
+| App onboarding | 80–112dp | 32–46dp | 13–16dp | Keep generous empty space around the mark |
+| Social profile avatar | 48–96px | Omit | Omit | Symbol only |
+| App launcher icon | 48–192px source | Omit | Omit | Use simplified symbol with safe-area padding |
+| Favicon | 16–48px | Omit | Omit | Use simplified single-colour symbol |
+| Printed worksheet header | 18–30mm | 10–16mm | 4–6mm | Use navy or black for reliable reproduction |
+
+### Colour Pairing Rules
+
+| Background | Symbol | Wordmark | Sanskrit line |
+| :--- | :--- | :--- | :--- |
+| Warm Ivory / white | Heritage Navy `#1E293B` | Heritage Navy `#1E293B` | Deep Gold `#B45309` |
+| Midnight Slate / navy | Turmeric Gold `#F59E0B` | Warm Ivory `#F8FAFC` | Warm Ivory `#F8FAFC` or Turmeric Gold |
+| Black and white print | Black `#000000` | Black `#000000` | Black `#000000` |
+| Dark monochrome | Warm Ivory `#F8FAFC` | Warm Ivory `#F8FAFC` | Warm Ivory `#F8FAFC` |
+
+Do not use Turmeric Gold as small body text on Warm Ivory. Use Deep Gold for readable small text, and reserve Bright Turmeric Gold for symbols, large text, and dark backgrounds.
+
+### Small-Size and Export Rules
+
+- Use the simplified symbol below `32px` displayed height unless the refined symbol remains clearly legible in testing.
+- Never use the wordmark or Sanskrit line below `48px` total lockup width.
+- Keep all SVG exports at a square viewBox with transparent background.
+- Preserve `stroke-linecap="round"` and `stroke-linejoin="round"` on the symbol paths.
+- Do not rasterise the master SVG; create PNG derivatives from the clean vector master.
+- Test the symbol and lockup at 16px, 24px, 32px, 48px, 96px, and 192px.
+- Test on both light and dark backgrounds before approving an export.
+- Check Devanagari rendering on an Android device before publishing the Sanskrit lockup.
+
 ---
 
 ## 4. Typography System: Dignified & Accessible
