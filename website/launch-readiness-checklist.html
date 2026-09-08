@@ -71,6 +71,11 @@
   .section { margin: 0 0 28px; }
   .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
   .section-note { margin: 0; color: var(--quiet); font-size: .82rem; }
+  .setup-notes { display: grid; gap: 8px; margin-top: 10px; }
+  details { padding: 12px 14px; background: rgba(30, 41, 59, .65); border: 1px solid var(--surface-2); border-radius: var(--radius); }
+  summary { color: var(--gold); cursor: pointer; font-size: .88rem; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); font-size: .88rem; }
+  code { color: var(--gold); font-size: .88em; }
   .items { display: grid; gap: 8px; }
   .item {
     display: flex;
@@ -209,7 +214,44 @@
   </section>
 
   <section class="section">
-    <div class="section-head"><h2>7. Launch communications</h2><p class="section-note">Invite the first users</p></div>
+    <div class="section-head"><h2>7. Domain, email, and social setup</h2><p class="section-note">Own the launch channels</p></div>
+    <div class="items">
+      <div class="item"><input id="channels-1" type="checkbox"><label for="channels-1"><strong>Launch blocker</strong><br>Register and renew the canonical domain, preferably <code>easyctet.in</code>, and record the renewal date.</label></div>
+      <div class="item"><input id="channels-2" type="checkbox"><label for="channels-2"><strong>Launch blocker</strong><br>Configure DNS, HTTPS, and the final canonical domain. Confirm both <code>www</code> and non-<code>www</code> behaviour.</label></div>
+      <div class="item"><input id="channels-3" type="checkbox"><label for="channels-3"><strong>Launch blocker</strong><br>Set up and test <code>support@easyctet.in</code> or the final support address.</label></div>
+      <div class="item"><input id="channels-4" type="checkbox"><label for="channels-4"><strong>Launch blocker</strong><br>Confirm the domain, support email, website, app, and Play Store listing use the same brand name and links.</label></div>
+      <div class="item"><input id="channels-5" type="checkbox"><label for="channels-5">Reserve the priority handles: Instagram, YouTube, Telegram, and WhatsApp Business or Channel.</label></div>
+      <div class="item"><input id="channels-6" type="checkbox"><label for="channels-6">Use the approved logo, name, tagline, Paper 1 scope, website link, and support email on every active profile.</label></div>
+      <div class="item"><input id="channels-14" type="checkbox"><label for="channels-14"><strong>Season 1 priority</strong><br>Configure Instagram as an active launch channel with the approved logo, Paper 1 bio, website link, and support email.</label></div>
+      <div class="item"><input id="channels-15" type="checkbox"><label for="channels-15"><strong>Season 1 priority</strong><br>Prepare Instagram content: Reels, subject tips, and question cards covering CDP, English, EVS, Hindi, and Mathematics.</label></div>
+      <div class="item"><input id="channels-16" type="checkbox"><label for="channels-16"><strong>Season 1 priority</strong><br>Configure the EasyCTET YouTube channel with the approved logo, Paper 1 description, website link, and support email.</label></div>
+      <div class="item"><input id="channels-17" type="checkbox"><label for="channels-17"><strong>Season 1 priority</strong><br>Prepare YouTube content: Shorts, sample explanations, and an app walkthrough showing the free Paper 1 experience.</label></div>
+      <div class="item"><input id="channels-7" type="checkbox"><label for="channels-7"><strong>Launch blocker</strong><br>Enable two-factor authentication and save recovery codes in the password manager.</label></div>
+      <div class="item"><input id="channels-8" type="checkbox"><label for="channels-8">Create a private account inventory containing platform, username, recovery email, 2FA status, profile URL, and renewal date. Never store passwords in this checklist.</label></div>
+      <div class="item"><input id="channels-9" type="checkbox"><label for="channels-9">Create or reserve a Facebook Page. Activate it in Season 1 only if it reaches CTET educators or re-attempting candidates effectively.</label></div>
+      <div class="item"><input id="channels-10" type="checkbox"><label for="channels-10">Reserve the EasyCTET handle on X/Twitter if available, but defer regular posting during Season 1.</label></div>
+      <div class="item"><input id="channels-11" type="checkbox"><label for="channels-11">Create or reserve a LinkedIn Page only if founder credibility, partnerships, or professional outreach makes it useful.</label></div>
+      <div class="item"><input id="channels-12" type="checkbox"><label for="channels-12">Consider a Google Business Profile only when the business identity and public contact details are ready and eligible.</label></div>
+      <div class="item"><input id="channels-13" type="checkbox"><label for="channels-13">Record Pinterest as deferred; do not create or maintain it unless visual study content shows clear demand.</label></div>
+    </div>
+    <div class="setup-notes">
+      <details>
+        <summary>Profile bio template</summary>
+        <p>EasyCTET | CTET Paper 1 preparation for CDP, English, EVS, Hindi, and Mathematics. Original questions, clear explanations, timed practice, and offline study support. Independent platform, not affiliated with CBSE or the CTET examination authority.</p>
+      </details>
+      <details>
+        <summary>Message to a community administrator</summary>
+        <p>Hello, I’m the developer of EasyCTET, an independent CTET Paper 1 preparation app. May I share one short, value-first Paper 1 practice question with the group, followed by a link to the free sample test? I will clearly disclose that I built the app and will follow the group’s promotion rules.</p>
+      </details>
+      <details>
+        <summary>Private account-record note</summary>
+        <p>Record the platform, exact username, profile URL, recovery email, 2FA status, date created, domain or subscription renewal date, and the person responsible. Store passwords and recovery codes only in the password manager.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>8. Launch communications</h2><p class="section-note">Invite the first users</p></div>
     <div class="items">
       <div class="item"><input id="launch-1" type="checkbox"><label for="launch-1"><strong>Launch blocker</strong><br>Prepare one personal-network launch message.</label></div>
       <div class="item"><input id="launch-2" type="checkbox"><label for="launch-2"><strong>Launch blocker</strong><br>Prepare one teacher-community message.</label></div>
@@ -221,7 +263,7 @@
   </section>
 
   <section class="section">
-    <div class="section-head"><h2>8. Soft-launch gate</h2><p class="section-note">Do this before broad promotion</p></div>
+    <div class="section-head"><h2>9. Soft-launch gate</h2><p class="section-note">Do this before broad promotion</p></div>
     <div class="items">
       <div class="item"><input id="soft-1" type="checkbox"><label for="soft-1">A new user understands the Paper 1 scope without explanation.</label></div>
       <div class="item"><input id="soft-2" type="checkbox"><label for="soft-2">A user can start free practice within a few minutes.</label></div>
@@ -233,7 +275,7 @@
   </section>
 
   <section class="section">
-    <div class="section-head"><h2>9. First-season measurement</h2><p class="section-note">Learn before scaling</p></div>
+    <div class="section-head"><h2>10. First-season measurement</h2><p class="section-note">Learn before scaling</p></div>
     <div class="items">
       <div class="item"><input id="measure-1" type="checkbox"><label for="measure-1">Set up a private spreadsheet for launch-update requests, installs, quiz starts, completions, repeat practice, conversions, refunds, support issues, and corrections.</label></div>
       <div class="item"><input id="measure-2" type="checkbox"><label for="measure-2">Review results after 24 hours, 7 days, and immediately after the 9 October exam period.</label></div>
@@ -242,7 +284,7 @@
   </section>
 
   <section class="section">
-    <div class="section-head"><h2>10. Defer to next season</h2><p class="section-note">Protect focus</p></div>
+    <div class="section-head"><h2>11. Defer to next season</h2><p class="section-note">Protect focus</p></div>
     <div class="items">
       <div class="item"><input id="defer-1" type="checkbox"><label for="defer-1">Paper 2 content and broader subject expansion.</label></div>
       <div class="item"><input id="defer-2" type="checkbox"><label for="defer-2">Paid advertising and broad influencer campaigns.</label></div>

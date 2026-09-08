@@ -69,6 +69,7 @@ header.site-header{
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .brand-icon svg{width:18px;height:18px;stroke:var(--ink-0);}
+.brand-icon img{width:24px;height:24px;}
 .brand-name{font-weight:700;color:var(--ink-0);}
 nav.links{display:flex;gap:22px;font-size:.9rem;}
 nav.links a{color:var(--ink-300);text-decoration:none;}
@@ -89,6 +90,8 @@ nav.links a:hover{color:var(--ink-0);}
   padding:5px 12px;border-radius:999px;margin-bottom:20px;
 }
 .hero h1{font-size:2.6rem;margin-bottom:4px;}
+.hero-lockup{display:flex;align-items:center;justify-content:center;gap:12px;margin:6px 0 12px;color:var(--ink-0);font:600 1.45rem/1 "Outfit","Inter",sans-serif;}
+.hero-lockup img{width:42px;height:42px;}
 .sanskrit{color:var(--amber-light);font-size:1.15rem;margin-bottom:6px;}
 .sanskrit-translit{color:var(--ink-500);font-size:.82rem;font-style:italic;margin-bottom:22px;}
 .hero .sub{max-width:52ch;margin:0 auto 28px;font-size:1.02rem;}
@@ -126,6 +129,8 @@ nav.links a:hover{color:var(--ink-0);}
 @media (max-width:720px){
   .pillars{grid-template-columns:1fr;}
   .hero h1{font-size:2.1rem;}
+  .hero-lockup{font-size:1.25rem;}
+  .hero-lockup img{width:36px;height:36px;}
 }
 
 /* Section heading block */
