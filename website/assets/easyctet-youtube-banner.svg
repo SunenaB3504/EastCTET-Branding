@@ -1,0 +1,27 @@
+<svg width="2560" height="1440" viewBox="0 0 2560 1440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">EasyCTET YouTube Channel Banner</title>
+  <desc id="desc">EasyCTET CTET Paper 1 preparation banner with Open Dawn logo, Sanskrit philosophy line, tagline, and five subjects.</desc>
+  <rect width="2560" height="1440" fill="#0F172A"/>
+  <path d="M0 1090C420 960 730 980 1040 1120C1400 1282 1780 1260 2560 1000" stroke="#1E293B" stroke-width="120" opacity="0.8"/>
+  <path d="M0 1125C420 995 730 1015 1040 1155C1400 1317 1780 1295 2560 1035" stroke="#334155" stroke-width="3" opacity="0.9"/>
+  <path d="M0 315C520 420 790 365 1130 245C1530 104 1920 130 2560 310" stroke="#B45309" stroke-width="3" opacity="0.42"/>
+
+  <!-- Open Dawn symbol, centred in the YouTube safe area -->
+  <g transform="translate(720 472) scale(2.1)" stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 56V35a22 22 0 0 1 44 0v21"/>
+    <path d="M50 86V28"/>
+    <path d="M38 40l12-12 12 12"/>
+    <path d="M14 62c16 0 30 4 36 12 6-8 20-12 36-12"/>
+    <path d="M14 74c16 0 30 4 36 12 6-8 20-12 36-12"/>
+  </g>
+
+  <text x="960" y="585" fill="#F8FAFC" font-family="Outfit, Inter, Arial, sans-serif" font-size="116" font-weight="600" letter-spacing="0">EasyCTET</text>
+  <text x="966" y="665" fill="#F59E0B" font-family="Noto Sans Devanagari, Nirmala UI, sans-serif" font-size="42" font-weight="400">सा विद्या या विमुक्तये</text>
+  <text x="966" y="762" fill="#F8FAFC" font-family="Outfit, Inter, Arial, sans-serif" font-size="48" font-weight="500">Serious CTET Paper 1 prep, simplified.</text>
+  <text x="966" y="846" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="400">CDP  ·  English  ·  EVS  ·  Hindi  ·  Mathematics</text>
+
+  <rect x="966" y="895" width="600" height="2" fill="#B45309" opacity="0.8"/>
+  <text x="966" y="950" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="400">Original questions  ·  Clear explanations  ·  Focused practice</text>
+
+  <!-- Safe-area guide is intentionally omitted from the final artwork. -->
+</svg>

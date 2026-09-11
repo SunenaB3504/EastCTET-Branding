@@ -1,0 +1,550 @@
+<title>EasyCTET Launch Sprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+
+<style>
+:root{
+  --paper:#FBFAF7;
+  --surface:#FFFFFF;
+  --surface-sunk:#F3F1EB;
+  --ink:#15171C;
+  --ink-soft:#4A4F5C;
+  --ink-mute:#6E7383;
+  --rule:#E2DFD7;
+  --rule-firm:#CBC7BC;
+  --indigo:#22306B;
+  --indigo-soft:#EAECF6;
+  --saffron:#B45F14;
+  --saffron-soft:#FAF0E2;
+  --crit:#9E2A1C;
+  --crit-soft:#FBEBE7;
+  --ok:#1B6446;
+  --ok-soft:#E7F2EC;
+  --measure:68ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#101218;--surface:#171A21;--surface-sunk:#1D212A;
+    --ink:#E9E7E2;--ink-soft:#B4B8C4;--ink-mute:#868C9C;
+    --rule:#2A2F3A;--rule-firm:#3A4150;
+    --indigo:#93A0DC;--indigo-soft:#1B2036;
+    --saffron:#E0995A;--saffron-soft:#2A2015;
+    --crit:#E5897A;--crit-soft:#2C1A17;
+    --ok:#65B694;--ok-soft:#132620;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101218;--surface:#171A21;--surface-sunk:#1D212A;
+  --ink:#E9E7E2;--ink-soft:#B4B8C4;--ink-mute:#868C9C;
+  --rule:#2A2F3A;--rule-firm:#3A4150;
+  --indigo:#93A0DC;--indigo-soft:#1B2036;
+  --saffron:#E0995A;--saffron-soft:#2A2015;
+  --crit:#E5897A;--crit-soft:#2C1A17;
+  --ok:#65B694;--ok-soft:#132620;
+}
+
+*{box-sizing:border-box;}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
+}
+.page{max-width:1080px;margin:0 auto;padding:0 24px 96px;}
+.col{max-width:var(--measure);}
+h1,h2,h3,h4{font-family:"Fraunces","Iowan Old Style",Georgia,serif;text-wrap:balance;margin:0;}
+p{margin:0;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums;}
+
+.masthead{padding:64px 0 40px;border-bottom:2px solid var(--ink);}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:20px;}
+h1{font-size:clamp(2.6rem,6vw,4.1rem);line-height:1.02;font-weight:600;letter-spacing:-.02em;}
+.standfirst{margin-top:22px;max-width:60ch;font-size:1.12rem;color:var(--ink-soft);}
+.meta-strip{display:flex;flex-wrap:wrap;gap:0;margin-top:36px;border:1px solid var(--rule-firm);border-radius:3px;overflow:hidden;}
+.meta-cell{flex:1 1 150px;padding:14px 18px;background:var(--surface);border-right:1px solid var(--rule);}
+.meta-cell:last-child{border-right:none;}
+.meta-label{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);}
+.meta-val{font-family:"IBM Plex Mono",monospace;font-size:1.32rem;font-weight:600;margin-top:5px;font-variant-numeric:tabular-nums;}
+
+section{padding-top:64px;}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;}
+.sec-num{font-family:"IBM Plex Mono",monospace;font-size:.78rem;font-weight:600;color:var(--saffron);flex-shrink:0;padding-top:6px;}
+h2{font-size:clamp(1.75rem,3.4vw,2.3rem);font-weight:600;letter-spacing:-.015em;line-height:1.14;}
+.sec-sub{margin:14px 0 0;color:var(--ink-soft);max-width:var(--measure);}
+h3{font-size:1.22rem;font-weight:600;margin:40px 0 12px;letter-spacing:-.01em;}
+h4{font-family:"IBM Plex Sans",sans-serif;font-size:.95rem;font-weight:700;margin:26px 0 8px;}
+section > p, .col > p{margin-top:16px;}
+
+.findings{display:grid;gap:18px;margin-top:32px;}
+@media (min-width:860px){.findings{grid-template-columns:repeat(3,1fr);}}
+.finding{background:var(--surface);border:1px solid var(--rule-firm);border-radius:4px;padding:22px 22px 24px;border-top:3px solid var(--flag,var(--indigo));display:flex;flex-direction:column;gap:10px;}
+.finding.crit{--flag:var(--crit);}
+.finding.warn{--flag:var(--saffron);}
+.finding.good{--flag:var(--ok);}
+.finding-tag{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--flag,var(--indigo));font-weight:600;}
+.finding h3{font-size:1.06rem;margin:0;line-height:1.32;}
+.finding p{font-size:.92rem;color:var(--ink-soft);}
+
+.callout{margin-top:28px;padding:20px 22px;border-radius:4px;background:var(--tone-bg,var(--indigo-soft));border-left:3px solid var(--tone,var(--indigo));max-width:var(--measure);}
+.callout.crit{--tone:var(--crit);--tone-bg:var(--crit-soft);}
+.callout.ok{--tone:var(--ok);--tone-bg:var(--ok-soft);}
+.callout.warn{--tone:var(--saffron);--tone-bg:var(--saffron-soft);}
+.callout-label{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tone,var(--indigo));font-weight:600;margin-bottom:7px;}
+.callout p{font-size:.94rem;}
+.callout p + p{margin-top:10px;}
+
+.tw{overflow-x:auto;margin-top:26px;border:1px solid var(--rule-firm);border-radius:4px;background:var(--surface);}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:540px;}
+thead th{text-align:left;padding:12px 16px;background:var(--surface-sunk);font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;border-bottom:1px solid var(--rule-firm);white-space:nowrap;}
+tbody td{padding:12px 16px;border-bottom:1px solid var(--rule);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+td.num,th.num{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap;}
+tr.hi td{background:var(--ok-soft);}
+tr.hi td:first-child{box-shadow:inset 3px 0 0 var(--ok);}
+tr.rest td{background:var(--indigo-soft);}
+tr.rest td:first-child{box-shadow:inset 3px 0 0 var(--indigo);}
+.tnote{font-size:.79rem;color:var(--ink-mute);margin-top:10px;max-width:var(--measure);}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:2px;background:var(--indigo-soft);color:var(--indigo);font-weight:600;white-space:nowrap;}
+.pill.ok{background:var(--ok-soft);color:var(--ok);}
+.pill.crit{background:var(--crit-soft);color:var(--crit);}
+.pill.warn{background:var(--saffron-soft);color:var(--saffron);}
+
+ul.clean{list-style:none;padding:0;margin:16px 0 0;max-width:var(--measure);display:flex;flex-direction:column;gap:11px;}
+ul.clean li{padding-left:20px;position:relative;color:var(--ink-soft);font-size:.95rem;}
+ul.clean li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1.5px;background:var(--saffron);}
+ul.clean li strong{color:var(--ink);font-weight:600;}
+ol.steps{margin:18px 0 0;padding-left:0;list-style:none;counter-reset:s;max-width:var(--measure);display:flex;flex-direction:column;gap:14px;}
+ol.steps li{counter-increment:s;padding-left:34px;position:relative;color:var(--ink-soft);font-size:.95rem;}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:1px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;color:var(--indigo);background:var(--indigo-soft);width:22px;height:22px;border-radius:2px;display:grid;place-items:center;}
+ol.steps li strong{color:var(--ink);font-weight:600;}
+
+.tiers{display:grid;gap:18px;margin-top:28px;}
+@media (min-width:840px){.tiers{grid-template-columns:repeat(3,1fr);}}
+.tier{background:var(--surface);border:1px solid var(--rule-firm);border-radius:4px;padding:22px;display:flex;flex-direction:column;gap:9px;}
+.tier-rate{font-family:"IBM Plex Mono",monospace;font-size:1.5rem;font-weight:600;color:var(--saffron);font-variant-numeric:tabular-nums;line-height:1;}
+.tier h4{margin:0;font-family:"Fraunces",Georgia,serif;font-size:1.05rem;font-weight:600;}
+.tier p{font-size:.9rem;color:var(--ink-soft);}
+
+.script{margin-top:18px;background:var(--surface);border:1px solid var(--rule-firm);border-radius:4px;overflow:hidden;}
+.script-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:11px 18px;background:var(--surface-sunk);border-bottom:1px solid var(--rule-firm);}
+.script-title{font-size:.86rem;font-weight:700;}
+.script-meta{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--ink-mute);margin-left:auto;}
+.script-body{padding:20px 22px;font-size:.9rem;line-height:1.68;color:var(--ink-soft);white-space:pre-wrap;}
+.script-body em{color:var(--ink-mute);font-style:italic;}
+
+.pipe{display:grid;gap:16px;margin-top:26px;}
+@media (min-width:800px){.pipe{grid-template-columns:repeat(3,1fr);}}
+.pipe-node{background:var(--surface);border:1px solid var(--rule-firm);border-radius:4px;padding:20px;}
+.pipe-node .pill{margin-bottom:10px;}
+.pipe-node h4{margin:0 0 6px;font-family:"Fraunces",Georgia,serif;font-size:1rem;font-weight:600;}
+.pipe-node p{font-size:.88rem;color:var(--ink-soft);}
+
+.rule{height:1px;background:var(--rule);margin-top:64px;}
+footer{padding-top:40px;}
+footer h3{margin-top:0;}
+.src{font-size:.84rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:7px;margin-top:14px;}
+.src a{color:var(--indigo);text-decoration:none;border-bottom:1px solid var(--rule-firm);}
+.src a:hover{border-bottom-color:var(--indigo);}
+a:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+</style>
+
+<div class="page">
+
+<header class="masthead">
+  <div class="kicker">Two-cycle plan · revised 9 September 2026</div>
+  <h1>EasyCTET Launch Sprint</h1>
+  <p class="standfirst">October banks credibility. Late November is where everything converges — results, the next application window, Paper 2, Hindi, and the channel. That's the launch.</p>
+
+  <div class="meta-strip">
+    <div class="meta-cell"><div class="meta-label">October price</div><div class="meta-val">₹299</div></div>
+    <div class="meta-cell"><div class="meta-label">December price</div><div class="meta-val">₹499</div></div>
+    <div class="meta-cell"><div class="meta-label">Affiliate rate</div><div class="meta-val">33%</div></div>
+    <div class="meta-cell"><div class="meta-label">Market after P2</div><div class="meta-val">8L → 25L</div></div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><h2>What the research changed</h2></div>
+  <p class="sec-sub">The first needs one evening this week. The third only came into focus once the channel moved to November — and it turns that delay into an advantage.</p>
+
+  <div class="findings">
+    <div class="finding crit">
+      <div class="finding-tag">Blocker</div>
+      <h3>WEB25 cannot exist as a discount code</h3>
+      <p>Play promo codes for one-time products are <strong>100%-off only</strong> — no partial discounts. Capped at 500 per quarter, and custom vanity codes are subscription-only. Your live site promises something the platform cannot deliver.</p>
+    </div>
+    <div class="finding warn">
+      <div class="finding-tag">Mispriced</div>
+      <h3>₹749 sits 2–7× above the market</h3>
+      <p>Testbook Pass covers <em>every</em> exam for a year at roughly ₹399. Adda247's CTET series — 931 mocks, multilingual — lists at ₹0 right now. Today you're one paper, English-only, with no reviews.</p>
+    </div>
+    <div class="finding good">
+      <div class="finding-tag">The window</div>
+      <h3>Late November is a triple convergence</h3>
+      <p>Results land roughly seven weeks after the exam. The next application window opens around the same time. And ~74% of candidates will have just failed. Your channel, Hindi and Paper 2 all arrive exactly then.</p>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <div class="callout-label">And one problem that turned out not to exist</div>
+    <p>I assumed an affiliate programme would force you to break your zero-telemetry promise, since you'd need to phone home to attribute sales. You don't. <strong>Play Console's acquisition reports break down both visitors and <em>buyers</em> by UTM source</strong> — Google does the attribution, your app sends nothing, the privacy claim stays intact, and there is nothing to build.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Why November beats the exam-day spike</h2></div>
+  <p class="sec-sub">Moving the channel to November costs you the 9 October moment. It buys you three bigger ones.</p>
+
+  <p class="col">The February 2026 exam ran on the 8th; its answer key appeared on 12 March and results on 30 March — about seven weeks. Applying the same lag to 9 October puts the <strong>answer key around mid-November</strong> and <strong>results around the end of November</strong>. The previous cycle's applications opened 17 November. All estimates — CBSE hasn't announced these — but the pattern is consistent.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Moment</th><th>Est. date</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Exam day</strong></td><td class="mono">9 Oct</td><td>Collect memory-based questions. Publish nothing — the channel isn't ready, and that's fine.</td></tr>
+        <tr class="hi"><td><strong>Channel launch</strong></td><td class="mono">~5 Nov</td><td>Live before the answer key, with the 9 October questions as its opening catalogue.</td></tr>
+        <tr><td><strong>Answer key</strong></td><td class="mono">~mid-Nov</td><td>Objection window. High engagement, high search volume, everyone checking their marks.</td></tr>
+        <tr><td><strong>Applications open</strong></td><td class="mono">~late Nov</td><td>25 lakh people decide to sit the next exam and start looking for material.</td></tr>
+        <tr class="hi"><td><strong>Results</strong></td><td class="mono">~end Nov</td><td>The biggest moment of all. Roughly 74% fail and immediately become next-cycle buyers.</td></tr>
+        <tr><td><strong>Product live</strong></td><td class="mono">December</td><td>Paper 1 + Paper 2, Hindi + English, into the peak study season.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout ok">
+    <div class="callout-label">The reframe</div>
+    <p>Exam evening is one spike for a channel nobody has heard of. Result week is a bigger spike, for an audience that has just been told they need to try again — arriving at the exact moment your bilingual two-paper product goes live. <strong>Collect on 9 October, publish in November.</strong> Thirty Shorts built from real exam questions is a stronger opening catalogue than one rushed video anyway.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>One pipeline, three renderers</h2></div>
+  <p class="sec-sub">November and December now carry Hindi, Paper 2, the channel and the website simultaneously. That's only survivable if they're one piece of work wearing four hats.</p>
+
+  <p class="col">You already have the question bank as structured JSON. The app reads it. Remotion can read the same file. So can a static site generator. Build it that way and the marginal cost of the third and fourth surfaces collapses to near zero. Build them as separate projects and this will genuinely be four times the work, and it won't happen.</p>
+
+  <div class="pipe">
+    <div class="pipe-node">
+      <span class="pill">Source</span>
+      <h4>The question bank</h4>
+      <p>One schema, versioned, with English and Hindi fields side by side, plus the explanation for every option. Get this right once — everything downstream is a thin renderer.</p>
+    </div>
+    <div class="pipe-node">
+      <span class="pill ok">Renderer 1</span>
+      <h4>The app</h4>
+      <p>Already built. Paper 2 is new content in the same shape, not a new product.</p>
+    </div>
+    <div class="pipe-node">
+      <span class="pill ok">Renderer 2 &amp; 3</span>
+      <h4>Remotion + static site</h4>
+      <p>One React template renders a Short from a question. A second renders that same question as an indexed web page. Both consume the identical JSON.</p>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <div class="callout-label">Where the real risk sits</div>
+    <p>Code is clearly not your bottleneck — you built the app in five days. <strong>Content is.</strong> Paper 2 isn't one product either: candidates choose either the Mathematics &amp; Science track or Social Studies, so it's two question banks. Across both papers, both tracks and both languages you're looking at roughly 3,000 question-and-explanation units.</p>
+    <p>Sequence it: Hindi for Paper 1 first, then Paper 2 CDP, then Paper 2 Maths &amp; Science, then Social Studies. If the last one slips, ship without it and say so plainly rather than shipping it thin.</p>
+  </div>
+
+  <div class="callout crit">
+    <div class="callout-label">The quality trap</div>
+    <p>CTET Hindi-medium uses specific standardised pedagogy terminology, and approximately-right Hindi is worse than no Hindi — this audience spots it instantly and says so in reviews. A wrong answer key in a paid app undoes 150 good reviews. Spend October's revenue on a subject expert to check the Hindi if you can.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>The YouTube channel</h2></div>
+  <p class="sec-sub">Remotion suits you specifically because your content is already data. Most CTET creators film themselves for twenty minutes per video; you'd render overnight.</p>
+
+  <h3>Three pillars, each from something you already own</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Pillar</th><th>Format</th><th>Built from</th><th>Job</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Today's Trap</strong></td>
+          <td>Shorts, 30–45s</td>
+          <td>The 750 questions you've already written</td>
+          <td>Discovery — Shorts is the one surface YouTube still pushes hard to non-subscribers</td>
+        </tr>
+        <tr>
+          <td><strong>Topic explainers</strong></td>
+          <td>8–12 min</td>
+          <td>The masterclass scripts, cut into single topics</td>
+          <td>Search and authority — these still pull traffic in two years</td>
+        </tr>
+        <tr>
+          <td><strong>Cycle events</strong></td>
+          <td>Reactive</td>
+          <td>Answer key, results, memory-based questions</td>
+          <td>Spikes — and Remotion lets you ship the same evening</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="col">Your differentiator maps unusually well onto Shorts. Most CTET Shorts just show a question and its answer. Yours explains <em>why the wrong option was tempting</em> — which is the hook, not the footnote.</p>
+
+  <div class="callout ok">
+    <div class="callout-label">The killer feature of choosing Remotion</div>
+    <p>Same component, two data sets, two videos. <strong>Bilingual output for roughly 10% extra effort</strong> — and Hindi-medium CTET YouTube is a larger audience than English. The Hindi content you're building for the app in November <em>is</em> the Hindi content for the channel. One investment, three surfaces.</p>
+  </div>
+
+  <h3>Two production decisions that save real pain</h3>
+  <ul class="clean">
+    <li><strong>Make the Shorts silent — text on screen, music bed.</strong> It sidesteps the Hindi text-to-speech quality problem completely, and it's the norm in this niche anyway. Voice is only needed for the explainers, where you already have recorded audio.</li>
+    <li><strong>Render locally, overnight.</strong> Remotion Lambda costs money you'd rather spend on a Hindi subject expert. At your volume, batch rendering on your own machine is free and fast enough.</li>
+  </ul>
+
+  <h3>Retitle the explainers for search</h3>
+  <p class="col">"The Operating System of a Child's Mind" is a good episode title and a terrible video title. Nobody searches for it. <span class="mono">Piaget's 4 Stages — CTET CDP</span> is what people actually type. Keep the poetic titles inside the app; use search language on YouTube.</p>
+
+  <div class="callout warn">
+    <div class="callout-label">The faceless problem, and how to hold it</div>
+    <p>Indian exam-prep YouTube runs on trusted teacher-personalities, and an animated channel starts at a credibility disadvantage. Don't apologise for it — position it as the same promise the app makes: no ads, no login, no ten-minute intro before the content. <em>Sirf questions, koi bakwaas nahi.</em> That reads as a stance rather than a limitation.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>The website's real job is search</h2></div>
+  <p class="sec-sub">Promotion is the smaller opportunity. The bigger one is that 750 questions are currently locked inside an app where Google cannot read them.</p>
+
+  <p class="col">Aspirants search "ctet cdp piaget questions with answers" every day. If those questions exist as indexed pages on easyctet.in, you capture that traffic permanently — and unlike YouTube reach, SEO compounds rather than decays. You already generate video from that JSON; generating static pages is the same exercise.</p>
+
+  <ul class="clean">
+    <li><strong>Publish a slice of the question bank as pages</strong> — one per topic, question plus full explanation. Each page embeds its matching Short; each Short's description links back to the page.</li>
+    <li><strong>Publish the masterclass scripts as articles.</strong> They're already written long-form in markdown. That's free SEO content with zero new writing.</li>
+    <li><strong>Fix the dead-end CTA.</strong> The site's main call to action is currently a <span class="mono">mailto:</span> link, which converts badly in a mobile-first market. Replace it with the opt-in channel and a subscribe link.</li>
+    <li><strong>Tag the Play links.</strong> Use <span class="mono">utm_source=youtube</span> and <span class="mono">utm_source=website</span> so Play Console tells you exactly what each surface converts — the same mechanism that runs the affiliate programme.</li>
+  </ul>
+
+  <div class="callout ok">
+    <div class="callout-label">What this adds up to</div>
+    <p>The app monetises, the channel discovers, the website compounds. All three read the same JSON, and the only thing you actually have to keep producing is questions — which is the one thing you were going to produce anyway.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>Revenue-share programme</h2></div>
+  <p class="sec-sub">Nothing to build, no telemetry, and a rate that sits at the top of the Indian edtech market.</p>
+
+  <div class="script">
+    <div class="script-head"><span class="script-title">The link you give each creator</span><span class="script-meta">One per partner</span></div>
+    <div class="script-body">https://play.google.com/store/apps/details?id=<em>your.package.name</em>&utm_source=<em>creator_handle</em>&utm_campaign=oct2026</div>
+  </div>
+  <p class="tnote">Play Console attributes the purchase to that source. Two advantages beyond privacy: nothing to build, and the numbers come from Google rather than from you — so a creator never has to take your word for what converted.</p>
+
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-rate">Free codes</div>
+      <h4>Ambassadors · 5k–20k subs</h4>
+      <p>Twelve free unlock codes each, no cash. They'd fall below Play's UTM reporting threshold anyway, so commission would be unmeasurable. ~30 creators, ~360 of your 500 quarterly codes.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-rate">₹100</div>
+      <h4>Partners · 20k+ subs</h4>
+      <p>Per sale on a ₹299 product — 33% of gross, 46% of what you keep. Paid weekly by UPI, no minimum, tracked in Play Console.</p>
+    </div>
+    <div class="tier">
+      <div class="tier-rate">₹120</div>
+      <h4>Anchors · top 3–5</h4>
+      <p>Per sale, plus Paper 2 beta access and a co-produced explainer. Earned after the first fortnight, not offered upfront.</p>
+    </div>
+  </div>
+
+  <p class="col">Adda247's own affiliate programme pays around 5%; Udemy pays 11–15%; broader edtech lands between 20% and 40%. At 33% you're at the top of that range — worth stating plainly in outreach, because most educators have only ever been offered 5%.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Price</th><th class="num">You keep after GST + Play fee</th><th class="num">Commission</th><th class="num">Net to you</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td class="mono">₹299 <span style="color:var(--ink-mute)">(Oct)</span></td><td class="num">₹215.38</td><td class="num">₹100</td><td class="num"><strong>₹115.38</strong></td></tr>
+        <tr class="hi"><td class="mono">₹499 <span style="color:var(--ink-mute)">(Dec)</span></td><td class="num">₹359.45</td><td class="num">₹150</td><td class="num"><strong>₹209.45</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tnote">18% GST inclusive in list price, Play service fee 15%. Check TDS on commission payments with your CA before the first payout.</p>
+
+  <div class="callout crit">
+    <div class="callout-label">Do not cross this line</div>
+    <p>You may ask anyone for an <em>honest</em> review. You may not make a code, payout or giveaway entry conditional on leaving one. Incentivised reviews breach Play Developer Program Policy and get listings suspended — which would end both cycles.</p>
+  </div>
+
+  <div class="script">
+    <div class="script-head"><span class="script-title">Partner outreach — lead with the rate</span><span class="script-meta">Email · 20k+ channels</span></div>
+    <div class="script-body">Subject: 33% per sale — CTET Paper 1 app, 30 days to exam
+
+Dear <em>[Name]</em>,
+
+I'm the developer of EasyCTET, an offline CTET Paper 1 app on Play.
+
+The offer, plainly: <strong>₹100 for every sale from your audience</strong> on a ₹299 one-time purchase. That's 33% — most edtech affiliate programmes in India pay between 5% and 15%.
+
+You get a Play Store link tagged to you, and sales are counted in Google's own Play Console reports rather than mine, so you never have to take my word for what converted. Paid weekly by UPI, no minimum, no lock-in.
+
+Why it may convert for your audience: fully offline after install, no ads, no login, and every wrong option in every question is explained — not just the right answer. Plus 13 downloadable audio lectures.
+
+Being straight about what it isn't: the interface is English-only this cycle (Hindi and Paper 2 land in December), and we're a new listing still building reviews.
+
+Happy to send a free unlock so you can judge it before deciding.
+
+Regards,
+<em>[Your name]</em> · easyctet.in</div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>October: the launch pad</h2></div>
+  <p class="sec-sub">October isn't where the money is. It's where the reviews, the list and the creator relationships come from — the things November's launch rests on.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Window</th><th class="num">Hrs/wk</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">9–14 Sep</td><td class="num">20</td><td>Price to ₹299. Strip every WEB25 and ₹999 reference. <strong>Submit the listing rewrite by the 11th</strong> — Play review takes up to a week. Fix the truncated scorecard labels. Set up UTM links and the opt-in channel.</td></tr>
+        <tr><td class="mono">15–21 Sep</td><td class="num">25</td><td>First 25 creator approaches across both tiers. Batch-produce daily question cards.</td></tr>
+        <tr><td class="mono">22–28 Sep</td><td class="num">25</td><td>Second 25 approaches. Send codes and UTM links. First payouts, however small — paying fast is what makes a creator mention you twice.</td></tr>
+        <tr><td class="mono">29 Sep–5 Oct</td><td class="num">25</td><td><strong>Admit cards drop 4 Oct.</strong> Biggest attention spike before results. Have a genuinely useful checklist ready two days early.</td></tr>
+        <tr><td class="mono">6–9 Oct</td><td class="num">15</td><td>Audio push. 8 Oct: one calm goodwill post, no selling. <strong>9 Oct: collect memory-based questions</strong> — this becomes the channel's opening catalogue.</td></tr>
+        <tr class="rest"><td class="mono">10–20 Oct</td><td class="num">0</td><td><strong>Stop.</strong> Still in the plan. November and December carry four workstreams; you need to arrive functional.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Targets</h3>
+  <ul class="clean">
+    <li><strong>150+ Play reviews at 4.3★ or better.</strong> The thing December's ₹499 pricing rests on.</li>
+    <li><strong>2,500+ installs</strong> and <strong>1,000+ on the opt-in channel</strong> — the list matters more than the installs, because without it November starts cold.</li>
+    <li><strong>20 warm creator relationships,</strong> five of which have actually converted sales.</li>
+    <li><strong>The 9 October memory-based question set.</strong></li>
+  </ul>
+
+  <h3>Your unfair advantage, used carefully</h3>
+  <p class="col">Your wife is a working teacher sitting Paper 1 on 9 October — the most valuable feedback loop available to you, a real candidate in the exact segment you build for. Two things worth saying. For the next thirty days her job is to pass, not to test your app or mention it to colleagues. And after the 9th she's the best source you'll have for what the exam actually asked, and for whether the Hindi terminology reads correctly to someone who teaches in it. That's a November asset, and a real one.</p>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>Pricing</h2></div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>List price</th><th class="num">Net of 18% GST</th><th class="num">Play fee (15%)</th><th class="num">You keep</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">₹749</td><td class="num">₹634.75</td><td class="num">₹95.21</td><td class="num"><strong>₹539.54</strong></td></tr>
+        <tr class="hi"><td class="mono">₹499</td><td class="num">₹422.88</td><td class="num">₹63.43</td><td class="num"><strong>₹359.45</strong></td></tr>
+        <tr><td class="mono">₹399</td><td class="num">₹338.14</td><td class="num">₹50.72</td><td class="num"><strong>₹287.42</strong></td></tr>
+        <tr class="hi"><td class="mono">₹299</td><td class="num">₹253.39</td><td class="num">₹38.01</td><td class="num"><strong>₹215.38</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The December ladder</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Product</th><th>Who buys it</th><th class="num">Price</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Paper 1 Pass</strong></td><td>Primary teachers, Classes 1–5 · ~8 lakh registrants</td><td class="num">₹299</td></tr>
+        <tr><td><strong>Paper 2 Pass</strong></td><td>Classes 6–8 · ~17 lakh registrants</td><td class="num">₹299</td></tr>
+        <tr class="hi"><td><strong>Both Papers</strong></td><td>Candidates hedging across both levels</td><td class="num">₹499</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tnote">Paper 2 had 16.99 lakh registrations against Paper 1's 8.30 lakh in the December 2024 cycle. Adding it doesn't grow your market — it roughly triples it.</p>
+
+  <div class="callout ok">
+    <div class="callout-label">The offer that costs nothing</div>
+    <p><strong>Every October buyer gets the December release — Paper 2 and Hindi included — free.</strong> The pass rate is 25.68%, so roughly three-quarters of your October cohort will sit again. This turns them into people with a genuine reason to recommend you, and converts "we're English-only right now" into a promise you visibly kept.</p>
+  </div>
+
+  <div class="callout crit">
+    <div class="callout-label">Legal check on the ₹999 strikethrough</div>
+    <p>A struck-through "regular price" you have never actually charged is a misleading reference price under the CCPA's guidelines on misleading advertisements. Drop it — don't invent an anchor.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>Play Store listing</h2></div>
+  <p class="sec-sub">Submit by 11 September. Three hours that keep working through October, your rest week, and the November application rush without you touching them.</p>
+
+  <div class="script">
+    <div class="script-head"><span class="script-title">App title</span><span class="script-meta">27 / 30 characters</span></div>
+    <div class="script-body">EasyCTET: CTET Paper 1 2026</div>
+  </div>
+  <p class="tnote">Brand first is deliberate — traffic will come from creators saying "search EasyCTET", so the brand must be findable. In December this becomes <span class="mono">EasyCTET: CTET Paper 1 &amp; 2</span>.</p>
+
+  <div class="script">
+    <div class="script-head"><span class="script-title">Short description</span><span class="script-meta">78 / 80 characters</span></div>
+    <div class="script-body">CTET Paper 1 mock tests with explained answers. CDP, EVS, Maths. Works offline.</div>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Query</th><th>Intent</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">ctet paper 1 mock test</td><td>Ready to practise, high purchase intent</td><td><span class="pill ok">Primary</span></td></tr>
+        <tr><td class="mono">ctet offline app</td><td>Explicitly wants what you built</td><td><span class="pill ok">Primary</span></td></tr>
+        <tr><td class="mono">ctet cdp questions</td><td>Subject-specific, your strongest content</td><td><span class="pill">Secondary</span></td></tr>
+        <tr><td class="mono">ctet paper 2 mock test</td><td>Twice the volume of Paper 1</td><td><span class="pill warn">December</span></td></tr>
+        <tr><td class="mono">ctet hindi medium</td><td>The largest segment you can't yet serve</td><td><span class="pill crit">Avoid until Dec</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tnote">The last two rows are your December growth, and the reason not to touch them now: chasing Hindi-medium search with an English-only interface buys installs that uninstall within a day and leave one-star reviews.</p>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">09</span><h2>If you do only five things</h2></div>
+  <ol class="steps">
+    <li><strong>This week:</strong> price to ₹299, delete every WEB25 reference, fix the truncated scorecard labels.</li>
+    <li><strong>By 11 September:</strong> submit the listing rewrite so Play review completes before it matters.</li>
+    <li><strong>Start the opt-in channel on day one.</strong> Without a list, November launches into silence.</li>
+    <li><strong>On 9 October, collect the memory-based questions</strong> — that's your channel's opening catalogue, not a one-off video.</li>
+    <li><strong>Design the JSON schema before you build anything in November.</strong> App, Remotion and website all read it. Get it right once and the last two are nearly free.</li>
+  </ol>
+
+  <div class="callout ok">
+    <div class="callout-label">The honest summary</div>
+    <p>October banks 150 reviews, a thousand people who trust you, and twenty creators who've seen the product convert. Late November puts a bilingual, two-paper product and a video channel in front of 25 lakh people at the exact moment three-quarters of them have just been told to try again. October is the launch pad. November is the launch.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<footer>
+  <h3>Sources</h3>
+  <div class="src">
+    <a href="https://support.google.com/googleplay/android-developer/answer/6321495?hl=en">Google Play Console Help — Create promotions (promo code limits and free-only behaviour)</a>
+    <a href="https://support.google.com/googleplay/android-developer/answer/9859173?hl=en">Google Play Console Help — Acquisition reports, UTM sources and the Buyers metric</a>
+    <a href="https://support.google.com/googleplay/android-developer/answer/112622?hl=en">Google Play Console Help — Service fees</a>
+    <a href="https://support.google.com/paymentscenter/answer/15152449?hl=en-IN">Google Payments Centre — India tax information (GST)</a>
+    <a href="https://testbook.com/news/ctet-revised-exam-date-2026/">Testbook — CTET revised exam date, 9 October 2026</a>
+    <a href="https://prepp.in/ctet-exam/results">Prepp — CTET result timeline (Feb 2026: exam 8 Feb, answer key 12 Mar, result 30 Mar)</a>
+    <a href="https://www.collegedekho.com/articles/ctet-result-statistics/">CollegeDekho — CTET registered vs appeared vs qualified, Paper 1 and Paper 2 split</a>
+    <a href="https://news.careers360.com/ctet-2026-25-lakh-candidates-registered-cbse-exam-february-8-two-shifts-admit-card-teacher-eligibility-test-classes-1-8">Careers360 — 25.3 lakh registrations and the previous application calendar</a>
+    <a href="https://pricehistory.app/p/testbook-com-pass-1-year-subscription-email-Q5qDMemb">Price History — Testbook Pass 1-year street pricing</a>
+    <a href="https://www.adda247.com/product-testseries/91822/ctet-paper-1-paper-2-mock-test-series">Adda247 — CTET Paper 1 &amp; 2 mock test series listing</a>
+    <a href="https://www.cuelinks.com/blog/top-education-affiliate-programs/">Cuelinks — Indian education affiliate programme commission rates</a>
+    <a href="https://appfollow.io/blog/google-play-aso-keywords">AppFollow — Google Play ASO keywords, 2026 guide</a>
+  </div>
+</footer>
+
+</div>

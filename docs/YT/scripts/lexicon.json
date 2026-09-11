@@ -1,0 +1,30 @@
+{
+  "_comment": "SSML pronunciation overrides for Azure hi-IN-SwaraNeural. Each entry is applied by the TTS build step (Stage A2) before sending SSML to the API. Extend this file the first time a new term breaks — never re-fix the same term twice.",
+
+  "Piaget":              { "ssml": "<phoneme alphabet=\"ipa\" ph=\"pjaʒe\">Piaget</phoneme>" },
+  "Vygotsky":            { "ssml": "<phoneme alphabet=\"ipa\" ph=\"vɪˈɡɒtski\">Vygotsky</phoneme>" },
+  "Kohlberg":            { "ssml": "<phoneme alphabet=\"ipa\" ph=\"ˈkoʊlbɜːrɡ\">Kohlberg</phoneme>" },
+  "Van Hiele":           { "ssml": "<phoneme alphabet=\"ipa\" ph=\"vɑn ˈhiːlə\">Van Hiele</phoneme>" },
+  "CTET":                { "ssml": "<say-as interpret-as=\"characters\">CTET</say-as>" },
+
+  "object permanence":   { "ssml": "<lang xml:lang=\"en-IN\">object permanence</lang>" },
+  "conservation":        { "ssml": "<lang xml:lang=\"en-IN\">conservation</lang>" },
+  "reversibility":       { "ssml": "<lang xml:lang=\"en-IN\">reversibility</lang>" },
+  "egocentrism":         { "ssml": "<lang xml:lang=\"en-IN\">egocentrism</lang>" },
+  "sensorimotor":        { "ssml": "<lang xml:lang=\"en-IN\">sensorimotor</lang>" },
+  "pre-operational":     { "ssml": "<lang xml:lang=\"en-IN\">pre-operational</lang>" },
+  "concrete operational":{ "ssml": "<lang xml:lang=\"en-IN\">concrete operational</lang>" },
+  "formal operational":  { "ssml": "<lang xml:lang=\"en-IN\">formal operational</lang>" },
+  "centration":          { "ssml": "<lang xml:lang=\"en-IN\">centration</lang>" },
+  "assimilation":        { "ssml": "<lang xml:lang=\"en-IN\">assimilation</lang>" },
+  "accommodation":       { "ssml": "<lang xml:lang=\"en-IN\">accommodation</lang>" },
+  "schema":              { "ssml": "<lang xml:lang=\"en-IN\">schema</lang>" },
+  "Zone of Proximal Development": { "ssml": "<lang xml:lang=\"en-IN\">Zone of Proximal Development</lang>" },
+  "scaffolding":         { "ssml": "<lang xml:lang=\"en-IN\">scaffolding</lang>" },
+  "More Knowledgeable Other": { "ssml": "<lang xml:lang=\"en-IN\">More Knowledgeable Other</lang>" },
+  "place value":         { "ssml": "<lang xml:lang=\"en-IN\">place value</lang>" },
+  "face value":          { "ssml": "<lang xml:lang=\"en-IN\">face value</lang>" },
+  "number system":       { "ssml": "<lang xml:lang=\"en-IN\">number system</lang>" },
+
+  "_break_before_reveal": "<break time=\"400ms\"/>"
+}

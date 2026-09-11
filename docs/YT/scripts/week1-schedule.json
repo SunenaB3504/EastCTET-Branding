@@ -1,0 +1,89 @@
+[
+  {
+    "date": "2026-09-15",
+    "day": 1,
+    "pillar": "P2",
+    "subject": "CDP",
+    "topicTag": "Jean Piaget",
+    "questionId": null,
+    "sourceRef": "docs/Branding-docs/Podcast-text/Podcast-01-Piaget-Source.md",
+    "scriptFile": "2026-09-15-piaget-four-stages.md",
+    "playlist": "CDP Concepts",
+    "voice": "own",
+    "status": "scripted"
+  },
+  {
+    "date": "2026-09-16",
+    "day": 2,
+    "pillar": "P1",
+    "subject": "CDP",
+    "topicTag": "Jean Piaget",
+    "questionId": "CDP-P1-001",
+    "scriptFile": "2026-09-16-cdp-p1-001.md",
+    "playlist": "Daily Drill",
+    "voice": "synthetic",
+    "status": "scripted"
+  },
+  {
+    "date": "2026-09-17",
+    "day": 3,
+    "pillar": "P3",
+    "subject": "CDP",
+    "topicTag": "Jean Piaget",
+    "questionId": ["CDP-P1-134", "CDP-P1-002"],
+    "scriptFile": "2026-09-17-assimilation-vs-accommodation.md",
+    "playlist": "Trap Busters",
+    "voice": "synthetic",
+    "status": "scripted"
+  },
+  {
+    "date": "2026-09-18",
+    "day": 4,
+    "pillar": "P1",
+    "subject": "EVS",
+    "topicTag": "Animals, Plants & Biological Adaptations",
+    "questionId": "EVS-P1-021",
+    "scriptFile": "2026-09-18-evs-p1-021.md",
+    "playlist": "Daily Drill",
+    "voice": "synthetic",
+    "status": "scripted",
+    "note": "Calendar originally said 'Family & relationships' — no such question exists in the bank. Substituted with a real EVS question (goat dentition/adaptation) instead of fabricating content."
+  },
+  {
+    "date": "2026-09-19",
+    "day": 5,
+    "pillar": "P4",
+    "subject": null,
+    "topicTag": "Exam Craft",
+    "questionId": null,
+    "scriptFile": "2026-09-19-exam-timing.md",
+    "playlist": "Exam Craft",
+    "voice": "synthetic",
+    "status": "scripted"
+  },
+  {
+    "date": "2026-09-20",
+    "day": 6,
+    "pillar": "P2",
+    "subject": "CDP",
+    "topicTag": "Lev Vygotsky",
+    "questionId": null,
+    "sourceRef": null,
+    "scriptFile": "2026-09-20-vygotsky-zpd.md",
+    "playlist": "CDP Concepts",
+    "voice": "own",
+    "status": "scripted"
+  },
+  {
+    "date": "2026-09-21",
+    "day": 7,
+    "pillar": "P1",
+    "subject": "Mathematics",
+    "topicTag": "Number System & Place Value",
+    "questionId": "MATH-P1-002",
+    "scriptFile": "2026-09-21-math-p1-002.md",
+    "playlist": "Daily Drill",
+    "voice": "synthetic",
+    "status": "scripted"
+  }
+]
