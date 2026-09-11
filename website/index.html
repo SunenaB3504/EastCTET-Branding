@@ -223,8 +223,8 @@
       <div class="price-card pro">
         <h3>Pro Pass (All 5)</h3>
         <p class="card-subtitle">Everything, offline, one pass</p>
-        <div class="price-row"><span class="price-new">₹299</span></div>
-        <p class="price-code">one-time purchase, not a subscription</p>
+        <div class="price-row"><span class="price-new" data-pricing-amount>₹299</span></div>
+        <p class="price-code" data-pricing-note>Early-bird price — through Oct 10, 2026. One-time purchase, not a subscription.</p>
         <ul>
           <li>Full 750+ question bank</li>
           <li>Complete study guides, all subjects</li>
@@ -415,9 +415,14 @@
       <h2>Common questions</h2>
     </div>
 
+    <p class="faq-category">General &amp; Pricing</p>
     <div class="faq-item">
       <div class="faq-q"><span>Is EasyCTET free to use?</span><span class="plus">+</span></div>
-      <div class="faq-a">Yes. The free tier includes sample questions across all 5 subjects, limited study guides, and preview audio episodes. Pro Pass unlocks the full 750+ question bank and complete content library.</div>
+      <div class="faq-a" data-faq-pricing>Yes. You can practice sample questions across all 5 subjects, read introductory study guides, and preview audio masterclasses for free without registering an account. For a limited time — until <strong>October 10, 2026</strong> — the full Pro Pass (all 5 Paper 1 subjects, 750+ questions, complete audio library, unlimited mock exams) is a one-time purchase of <strong>₹299</strong>. From October 11, 2026, the price moves to <strong>₹999</strong>. There are no recurring subscriptions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Will I be charged more later if I buy now?</span><span class="plus">+</span></div>
+      <div class="faq-a">No. Whatever price is active in Google Play at the moment you purchase is locked in for life on your account. If you buy during a launch or early-bird offer, you keep that price forever — no top-up, no re-purchase, ever, even after the standard price rises.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q"><span>Does this cover CTET Paper 1 for Primary teachers?</span><span class="plus">+</span></div>
@@ -427,13 +432,41 @@
       <div class="faq-q"><span>Which language is Language II based on?</span><span class="plus">+</span></div>
       <div class="faq-a">Language II is Hindi.</div>
     </div>
+
+    <p class="faq-category">Device Changes, Purchases &amp; Data</p>
+    <div class="faq-item">
+      <div class="faq-q"><span>What happens if I change my phone or reinstall EasyCTET?</span><span class="plus">+</span></div>
+      <div class="faq-a">Your Pro Pass is linked to your Google Play account, not the physical phone. Install EasyCTET on your new device using the same Google account, then go to Settings &gt; Restore Purchases — your pass activates immediately at no extra charge. Because EasyCTET keeps everything on-device rather than on a central server, your test scores and mistake ledger stay on your old phone and start fresh on the new one.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>How do I reset my test scores to start revision from scratch?</span><span class="plus">+</span></div>
+      <div class="faq-a">Go to Settings &gt; Data Management &gt; Reset All Local Progress &amp; Scores. This clears your mock test history and mistake ledger while keeping your unlocked Pro Pass safe.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Will updating the app from the Google Play Store erase my progress?</span><span class="plus">+</span></div>
+      <div class="faq-a">No. Standard updates from Google Play refresh the app code and question bank while preserving your existing scores, saved progress, and purchase.</div>
+    </div>
+
+    <p class="faq-category">Self-Troubleshooting &amp; Offline</p>
+    <div class="faq-item">
+      <div class="faq-q"><span>What is "1-Tap Quick Repair" and when should I use it?</span><span class="plus">+</span></div>
+      <div class="faq-a">If an exam session ever freezes or questions load oddly, you don't need to reinstall or email support. Go to Settings &gt; 1-Tap Quick Repair — it re-verifies the question vault and clears stale session cache in under 1 second, without erasing your past scores.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>What do the error codes (e.g. L1-DATA-002, L2-TTS-001) mean?</span><span class="plus">+</span></div>
+      <div class="faq-a">EasyCTET uses on-device diagnostic codes so you always know what's happening, even offline: <strong>L0-OK-000</strong> means everything is healthy; <strong>L1-DATA-002</strong> is a session data glitch, fixed by 1-Tap Quick Repair; <strong>L2-TTS-001</strong> means a device audio/speech issue — check Text-to-Speech is enabled in Android Settings; <strong>L3-BILL-001</strong> means Google Play couldn't be reached — check your connection and retry. You can also tap "Draft Diagnostic Email" in Settings to send a pre-filled report to support.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Why is the Audio Masterclass not playing sound?</span><span class="plus">+</span></div>
+      <div class="faq-a">EasyCTET uses your Android device's built-in Text-to-Speech engine so audio works fully offline without using mobile data. If you hear nothing, check your media volume, and make sure Text-to-Speech output (Google Speech Services or your phone's built-in TTS) is enabled under Android Settings &gt; System &gt; Languages &amp; Input.</div>
+    </div>
     <div class="faq-item">
       <div class="faq-q"><span>Does the app really work with no internet connection?</span><span class="plus">+</span></div>
-      <div class="faq-a">Yes. All questions, study guides, and audio content work fully offline once downloaded — no signal needed to practice.</div>
+      <div class="faq-a">Yes. Once installed, every question, study guide, and audio masterclass works fully offline — no signal needed to practice. The only moment an internet connection is used is a brief handshake with Google Play when you purchase or tap "Restore Purchases."</div>
     </div>
     <div class="faq-item">
       <div class="faq-q"><span>What does "Zero Telemetry" actually mean for my privacy?</span><span class="plus">+</span></div>
-      <div class="faq-a">We don't collect analytics on how you use the app, don't use ad trackers, and don't sell or share your data. Your study progress stays on your own device. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</div>
+      <div class="faq-a">We don't collect analytics on how you use the app, don't use ad trackers, and don't sell or share your data — there's no central server logging your test attempts. You never need to create an account or provide an email or phone number. Your study progress stays on your own device. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</div>
     </div>
   </div>
 </section>

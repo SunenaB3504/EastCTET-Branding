@@ -232,6 +232,11 @@ nav.links a:hover{color:var(--ink-0);}
 .gate-line{font-size:.8rem;color:var(--ink-500);margin-top:10px;margin-bottom:0;}
 
 /* FAQ */
+.faq-category{
+  font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--amber-light);margin:28px 0 4px;
+}
+.faq-category:first-of-type{margin-top:0;}
 .faq-item{border-bottom:1px solid var(--navy-800);padding:16px 0;}
 .faq-q{
   display:flex;justify-content:space-between;align-items:center;cursor:pointer;
