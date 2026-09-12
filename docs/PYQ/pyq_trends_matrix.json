@@ -1,0 +1,622 @@
+[
+  {
+    "topic_id": "cdp_piaget_cognitive",
+    "title_en": "Piaget's Theory of Cognitive Development",
+    "title_hi": "पियाजे का संज्ञानात्मक विकास सिद्धांत",
+    "subject": "cdp",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 98,
+    "avg_questions": 2.5,
+    "trend": "rising_assertion_reason",
+    "core_concepts_en": [
+      "Sensorimotor",
+      "Preoperational",
+      "Concrete Operational",
+      "Formal Operational",
+      "Assimilation",
+      "Accommodation",
+      "Equilibration",
+      "Object Permanence",
+      "Conservation",
+      "Egocentrism"
+    ],
+    "core_concepts_hi": [
+      "संवेदी-गामक अवस्था",
+      "पूर्व-संक्रियात्मक अवस्था",
+      "मूर्त संक्रियात्मक अवस्था",
+      "अमूर्त/औपचारिक संक्रियात्मक अवस्था",
+      "आत्मसातीकरण",
+      "समायोजन",
+      "संतुलन",
+      "वस्तु स्थायित्व",
+      "संरक्षण",
+      "अहंकेंद्रित"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2022",
+      "Jan 2021"
+    ],
+    "pedagogical_insight": "Consistently tests the distinction between Assimilation and Accommodation through real-classroom teacher scenarios and Assertion-Reason formats. The transition from preoperational to concrete operational is frequently tested via 'conservation' tasks."
+  },
+  {
+    "topic_id": "cdp_vygotsky_sociocultural",
+    "title_en": "Vygotsky's Socio-Cultural Theory",
+    "title_hi": "वाइगोत्स्की का सामाजिक-सांस्कृतिक सिद्धांत",
+    "subject": "cdp",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 96,
+    "avg_questions": 2.5,
+    "trend": "constant_guaranteed",
+    "core_concepts_en": [
+      "Zone of Proximal Development (ZPD)",
+      "Scaffolding",
+      "More Knowledgeable Other (MKO)",
+      "Private Speech",
+      "Collaborative Learning",
+      "Reciprocal Teaching"
+    ],
+    "core_concepts_hi": [
+      "विकास का समीपस्थ क्षेत्र (ZPD)",
+      "पाड़ या मचान (Scaffolding)",
+      "अधिक ज्ञानी अन्य (MKO)",
+      "निजी/व्यक्तिगत वाक्",
+      "सहयोगात्मक अधिगम",
+      "पारस्परिक शिक्षण"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021",
+      "Dec 2019"
+    ],
+    "pedagogical_insight": "Frequently contrasted against Piaget. Vygotsky views language (Private Speech) as a critical tool for cognitive self-regulation, whereas Piaget views it as egocentric. Scaffolding is tested via situational examples of teachers providing temporary cues."
+  },
+  {
+    "topic_id": "cdp_kohlberg_moral",
+    "title_en": "Kohlberg's Theory of Moral Development",
+    "title_hi": "कोहलबर्ग का नैतिक विकास का सिद्धांत",
+    "subject": "cdp",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 88,
+    "avg_questions": 1.5,
+    "trend": "stable_factual",
+    "core_concepts_en": [
+      "Pre-conventional Level",
+      "Conventional Level",
+      "Post-conventional Level",
+      "Heinz Dilemma",
+      "Punishment and Obedience",
+      "Good Boy-Nice Girl Orientation",
+      "Social Contract Orientation",
+      "Carol Gilligan Critique"
+    ],
+    "core_concepts_hi": [
+      "पूर्व-पारंपरिक स्तर",
+      "पारंपरिक स्तर",
+      "उत्तर-पारंपरिक स्तर",
+      "हेंज दुविधा",
+      "दंड और आज्ञापालन",
+      "अच्छा लड़का-अच्छी लड़की अभिविन्यास",
+      "सामाजिक अनुबंध अभिविन्यास",
+      "कैरोल गिलिगन की आलोचना"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021"
+    ],
+    "pedagogical_insight": "Carol Gilligan's critique of Kohlberg (gender bias and ethics of care vs. justice) is increasingly used as an alternative distractor or primary question focus in recent CBT and OMR papers."
+  },
+  {
+    "topic_id": "cdp_inclusive_education",
+    "title_en": "Inclusive Education & CWSN",
+    "title_hi": "समावेशी शिक्षा और विशेष आवश्यकता वाले बच्चे",
+    "subject": "cdp",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 100,
+    "avg_questions": 5.0,
+    "trend": "constant_guaranteed",
+    "core_concepts_en": [
+      "Dyslexia",
+      "Dysgraphia",
+      "Dyscalculia",
+      "ADHD",
+      "Autism Spectrum",
+      "Equity vs Equality",
+      "Marginalized Backgrounds"
+    ],
+    "core_concepts_hi": [
+      "डिस्लेक्सिया (पठन वैकल्य)",
+      "डिस्ग्राफिया (लेखन वैकल्य)",
+      "डिस्कैल्कुलिया (गणितीय वैकल्य)",
+      "एडीएचडी",
+      "स्वलीनता (ऑटिज्म)",
+      "समता बनाम समानता",
+      "वंचित पृष्ठभूमि"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021",
+      "Dec 2018"
+    ],
+    "pedagogical_insight": "Carries a strictly mandated 5-mark weightage. Exam traps feature options proposing 'segregation' or 'special schools' for CWSN; candidates must always choose 'mainstreaming' and 'adaptation'."
+  },
+  {
+    "topic_id": "cdp_intelligence_gardner",
+    "title_en": "Multi-Dimensional Intelligence (Howard Gardner)",
+    "title_hi": "बहुआयामी बुद्धि (हॉवर्ड गार्डनर)",
+    "subject": "cdp",
+    "paper": "both",
+    "tier": 2,
+    "frequency_pct": 82,
+    "avg_questions": 1.0,
+    "trend": "stable_factual",
+    "core_concepts_en": [
+      "Linguistic",
+      "Logical-Mathematical",
+      "Spatial",
+      "Bodily-Kinesthetic",
+      "Musical",
+      "Interpersonal",
+      "Intrapersonal",
+      "Naturalistic"
+    ],
+    "core_concepts_hi": [
+      "भाषाई",
+      "तार्किक-गणितीय",
+      "स्थानिक",
+      "शारीरिक-गतिक",
+      "संगीतात्मक",
+      "अंतरवैयक्तिक",
+      "अंतःवैयक्तिक",
+      "प्रकृतिवादी"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2021"
+    ],
+    "pedagogical_insight": "Rejects the unitary concept of IQ. Frequently tests the distinction between Interpersonal (understanding others) and Intrapersonal (understanding oneself)."
+  },
+  {
+    "topic_id": "gen_nep_2020",
+    "title_en": "National Education Policy (NEP) 2020",
+    "title_hi": "राष्ट्रीय शिक्षा नीति (NEP) 2020",
+    "subject": "all",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 100,
+    "avg_questions": 4.0,
+    "trend": "rising_assertion_reason",
+    "core_concepts_en": [
+      "5+3+3+4 Structure",
+      "Holistic 360-degree Assessment",
+      "Multilingualism / Mother Tongue",
+      "Experiential Learning",
+      "Elimination of Rote Learning",
+      "Formative Assessment"
+    ],
+    "core_concepts_hi": [
+      "5+3+3+4 संरचना",
+      "समग्र 360-डिग्री मूल्यांकन",
+      "बहुभाषिकता / मातृभाषा",
+      "अनुभवात्मक अधिगम",
+      "रटंत विद्या का उन्मूलन",
+      "रचनात्मक आकलन"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2022"
+    ],
+    "pedagogical_insight": "A structural pillar post-2021. Any option suggesting 'standardization', 'summative high-stakes exams', or 'English-only instruction' is a guaranteed incorrect distractor."
+  },
+  {
+    "topic_id": "gen_assessment_paradigms",
+    "title_en": "Assessment Paradigms (For, Of, As Learning)",
+    "title_hi": "आकलन प्रतिमान (सीखने के लिए, का, के रूप में आकलन)",
+    "subject": "all",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 100,
+    "avg_questions": 3.0,
+    "trend": "constant_guaranteed",
+    "core_concepts_en": [
+      "Assessment for Learning (Formative)",
+      "Assessment of Learning (Summative)",
+      "Assessment as Learning (Self-assessment)",
+      "Diagnostic Assessment",
+      "Portfolios and Anecdotal Records"
+    ],
+    "core_concepts_hi": [
+      "सीखने के लिए आकलन (रचनात्मक)",
+      "सीखने का आकलन (योगात्मक)",
+      "सीखने के रूप में आकलन (स्व-आकलन)",
+      "निदानात्मक आकलन",
+      "पोर्टफोलियो और वास्तविक रिकॉर्ड"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021",
+      "July 2019"
+    ],
+    "pedagogical_insight": "A non-negotiable construct across all sections. 'Assessment FOR learning' happens during the instructional process to modify teaching, while 'Assessment OF learning' happens at the end."
+  },
+  {
+    "topic_id": "lang_acquisition_vs_learning",
+    "title_en": "Language Acquisition vs. Language Learning",
+    "title_hi": "भाषा अर्जन बनाम भाषा अधिगम",
+    "subject": "language",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 94,
+    "avg_questions": 2.0,
+    "trend": "stable_factual",
+    "core_concepts_en": [
+      "Subconscious vs Conscious",
+      "Informal vs Formal",
+      "Mother Tongue (L1) vs Second Language (L2)",
+      "Natural Environment"
+    ],
+    "core_concepts_hi": [
+      "अवचेतन बनाम सचेत",
+      "अनौपचारिक बनाम औपचारिक",
+      "मातृभाषा (L1) बनाम द्वितीय भाषा (L2)",
+      "प्राकृतिक वातावरण"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021"
+    ],
+    "pedagogical_insight": "The fundamental baseline of language pedagogy. Acquisition is natural, effortless, and grammatically intuitive. Learning is effortful, formal, and rule-based."
+  },
+  {
+    "topic_id": "lang_chomsky_lad",
+    "title_en": "Chomsky's Language Development Theory",
+    "title_hi": "चॉम्स्की का भाषा विकास सिद्धांत",
+    "subject": "language",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 92,
+    "avg_questions": 1.5,
+    "trend": "constant_guaranteed",
+    "core_concepts_en": [
+      "Language Acquisition Device (LAD)",
+      "Universal Grammar",
+      "Innatist Perspective",
+      "Biological Predisposition"
+    ],
+    "core_concepts_hi": [
+      "भाषा अर्जन यंत्र (LAD)",
+      "सार्वभौमिक व्याकरण",
+      "जन्मजात क्षमता",
+      "जैविक प्रवृत्ति"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021",
+      "Dec 2019"
+    ],
+    "pedagogical_insight": "Candidates must recognize Chomsky’s core tenet: children do not learn language merely through imitation (behaviorism), but possess a hardwired cognitive blueprint (LAD) that deciphers grammatical rules."
+  },
+  {
+    "topic_id": "lang_krashen_monitor",
+    "title_en": "Stephen Krashen's Monitor Model",
+    "title_hi": "स्टीफन क्रैशन का मॉनिटर मॉडल",
+    "subject": "language",
+    "paper": "both",
+    "tier": 2,
+    "frequency_pct": 75,
+    "avg_questions": 1.0,
+    "trend": "rising_assertion_reason",
+    "core_concepts_en": [
+      "Comprehensible Input (i+1)",
+      "Affective Filter Hypothesis",
+      "Monitor Hypothesis",
+      "Natural Order Hypothesis"
+    ],
+    "core_concepts_hi": [
+      "बोधगम्य निवेश (i+1)",
+      "भावात्मक फ़िल्टर परिकल्पना",
+      "निरीक्षण/मॉनिटर परिकल्पना",
+      "प्राकृतिक क्रम परिकल्पना"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022"
+    ],
+    "pedagogical_insight": "Highly prominent in recent English and Hindi Pedagogy sections. The 'Affective Filter' dictates that high anxiety blocks language acquisition; hence, a supportive classroom is a linguistic necessity."
+  },
+  {
+    "topic_id": "lang_skills_lsrw",
+    "title_en": "Language Skills (LSRW)",
+    "title_hi": "भाषा कौशल (LSRW)",
+    "subject": "language",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 86,
+    "avg_questions": 2.0,
+    "trend": "stable_factual",
+    "core_concepts_en": [
+      "Listening and Reading (Receptive/Passive)",
+      "Speaking and Writing (Productive/Active)",
+      "Integrated Approach",
+      "Fine Motor Skills (Writing)"
+    ],
+    "core_concepts_hi": [
+      "सुनना और पढ़ना (ग्रहणात्मक कौशल)",
+      "बोलना और लिखना (अभिव्यक्तात्मक कौशल)",
+      "एकीकृत दृष्टिकोण",
+      "सूक्ष्म गतिक कौशल (लेखन)"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2021"
+    ],
+    "pedagogical_insight": "Tests the categorization of receptive vs. productive skills. Crucial rule: Language skills are not learned in strict isolation; they must be taught in an integrated manner."
+  },
+  {
+    "topic_id": "math_van_hiele",
+    "title_en": "Van Hiele's Levels of Geometric Thinking",
+    "title_hi": "वैन हीले का ज्यामितीय चिंतन स्तर",
+    "subject": "mathematics",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 90,
+    "avg_questions": 1.5,
+    "trend": "constant_guaranteed",
+    "core_concepts_en": [
+      "Level 0: Visualization",
+      "Level 1: Analysis",
+      "Level 2: Informal Deduction",
+      "Level 3: Formal Deduction",
+      "Level 4: Rigor"
+    ],
+    "core_concepts_hi": [
+      "स्तर 0: चाक्षुषीकरण (Visualization)",
+      "स्तर 1: विश्लेषण (Analysis)",
+      "स्तर 2: अनौपचारिक निगमन (Informal Deduction)",
+      "स्तर 3: औपचारिक निगमन",
+      "स्तर 4: दृढ़ता"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021",
+      "July 2019"
+    ],
+    "pedagogical_insight": "Questions describe a child identifying a rectangle 'because it looks like a door' (Level 0) versus identifying it by its parallel sides and 90-degree angles (Level 1). Crucial for primary Math pedagogy."
+  },
+  {
+    "topic_id": "math_nature_of_mathematics",
+    "title_en": "Nature of Mathematics and Logical Thinking",
+    "title_hi": "गणित की प्रकृति और तार्किक चिंतन",
+    "subject": "mathematics",
+    "paper": "both",
+    "tier": 1,
+    "frequency_pct": 95,
+    "avg_questions": 2.5,
+    "trend": "rising_assertion_reason",
+    "core_concepts_en": [
+      "Mathematization of Child's Thought",
+      "Abstract Nature",
+      "Inductive and Deductive Reasoning",
+      "Role of Manipulatives (Dienes Blocks, Geoboard)"
+    ],
+    "core_concepts_hi": [
+      "बच्चे की सोच का गणितीयकरण",
+      "अमूर्त प्रकृति",
+      "आगमनात्मक और निगमनात्मक तर्क",
+      "शिक्षण अधिगम सामग्री की भूमिका (डीन्स ब्लॉक, जियोबोर्ड)"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022"
+    ],
+    "pedagogical_insight": "CBSE rejects the definition of math as merely 'calculation'. The ultimate goal of NCF 2005 is the 'mathematization' of thought. Distractors often suggest math is only for 'gifted' students."
+  },
+  {
+    "topic_id": "evs_six_themes",
+    "title_en": "EVS Syllabus Themes (NCF 2005)",
+    "title_hi": "ईवीएस पाठ्यक्रम की थीम (NCF 2005)",
+    "subject": "evs",
+    "paper": "paper_1",
+    "tier": 1,
+    "frequency_pct": 100,
+    "avg_questions": 3.0,
+    "trend": "constant_guaranteed",
+    "core_concepts_en": [
+      "Family and Friends",
+      "Food",
+      "Shelter",
+      "Water",
+      "Travel",
+      "Things we make and do",
+      "Integrated Approach"
+    ],
+    "core_concepts_hi": [
+      "परिवार और मित्र",
+      "भोजन",
+      "आवास",
+      "जल",
+      "यात्रा",
+      "हम चीजें कैसे बनाते हैं",
+      "एकीकृत दृष्टिकोण"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2021",
+      "Dec 2018"
+    ],
+    "pedagogical_insight": "CBSE always tests knowledge of the 6 main themes vs. the 4 sub-themes of 'Family and Friends' (Relationships, Work and Play, Animals, Plants). EVS is explicitly designed without traditional textbook boundaries."
+  },
+  {
+    "topic_id": "evs_process_skills",
+    "title_en": "EVS Process Skills & Experiential Learning",
+    "title_hi": "ईवीएस प्रक्रिया कौशल और अनुभवात्मक अधिगम",
+    "subject": "evs",
+    "paper": "paper_1",
+    "tier": 1,
+    "frequency_pct": 92,
+    "avg_questions": 2.5,
+    "trend": "stable_factual",
+    "core_concepts_en": [
+      "Observation",
+      "Classification",
+      "Mapping Skills",
+      "Inferencing",
+      "Field Trips and Community Resources"
+    ],
+    "core_concepts_hi": [
+      "अवलोकन",
+      "वर्गीकरण",
+      "मानचित्रण कौशल",
+      "अनुमान लगाना",
+      "क्षेत्र भ्रमण और सामुदायिक संसाधन"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2021"
+    ],
+    "pedagogical_insight": "Rote memorization is heavily penalized in EVS pedagogy. Teachers must utilize the child's immediate environment. Mapping skills (understanding direction and relative position) are a guaranteed 1-mark question."
+  },
+  {
+    "topic_id": "sci_nature_of_science",
+    "title_en": "Nature of Science and Scientific Method",
+    "title_hi": "विज्ञान की प्रकृति और वैज्ञानिक विधि",
+    "subject": "science",
+    "paper": "paper_2",
+    "tier": 1,
+    "frequency_pct": 88,
+    "avg_questions": 2.0,
+    "trend": "rising_assertion_reason",
+    "core_concepts_en": [
+      "Empirical Evidence",
+      "Tentative Nature of Science",
+      "Observation vs Inference",
+      "Inquiry-based Learning",
+      "Alternative Conceptions"
+    ],
+    "core_concepts_hi": [
+      "अनुभवजन्य साक्ष्य",
+      "विज्ञान की अस्थायी प्रकृति",
+      "अवलोकन बनाम अनुमान",
+      "पूछताछ-आधारित अधिगम",
+      "वैकल्पिक अवधारणाएं (भ्रांतियां)"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022"
+    ],
+    "pedagogical_insight": "Science is presented not as a static body of facts, but as a tentative process. Candidates must differentiate between an observation (what is seen) and an inference (what is deduced)."
+  },
+  {
+    "topic_id": "sst_historical_inquiry",
+    "title_en": "Historical Inquiry & Sources",
+    "title_hi": "ऐतिहासिक पूछताछ और स्रोत",
+    "subject": "social_studies",
+    "paper": "paper_2",
+    "tier": 1,
+    "frequency_pct": 85,
+    "avg_questions": 2.0,
+    "trend": "rising_assertion_reason",
+    "core_concepts_en": [
+      "Primary Sources",
+      "Secondary Sources",
+      "Empirical Evidence",
+      "Critical Thinking",
+      "Historiography Bias"
+    ],
+    "core_concepts_hi": [
+      "प्राथमिक स्रोत",
+      "द्वितीयक स्रोत",
+      "अनुभवजन्य साक्ष्य",
+      "आलोचनात्मक चिंतन",
+      "इतिहास-लेखन पूर्वाग्रह"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Dec 2022",
+      "Jan 2022"
+    ],
+    "pedagogical_insight": "Candidates are routinely tested on classifying sources (e.g., an artifact is a primary source, a textbook is secondary). Pedagogical focus is on encouraging students to question historical narratives and overcome bias."
+  },
+  {
+    "topic_id": "sst_bloom_taxonomy",
+    "title_en": "Bloom's Taxonomy in Social Science",
+    "title_hi": "सामाजिक विज्ञान में ब्लूम का वर्गीकरण",
+    "subject": "social_studies",
+    "paper": "paper_2",
+    "tier": 2,
+    "frequency_pct": 70,
+    "avg_questions": 1.5,
+    "trend": "stable_factual",
+    "core_concepts_en": [
+      "Knowledge",
+      "Comprehension",
+      "Application",
+      "Analysis",
+      "Synthesis/Creation",
+      "Evaluation"
+    ],
+    "core_concepts_hi": [
+      "ज्ञान",
+      "समझ / बोध",
+      "अनुप्रयोग",
+      "विश्लेषण",
+      "संश्लेषण / निर्माण",
+      "मूल्यांकन"
+    ],
+    "recent_exam_years": [
+      "July 2024",
+      "Jan 2024",
+      "Aug 2023",
+      "Jan 2021"
+    ],
+    "pedagogical_insight": "Used to test lesson planning objectives. Teachers must aim for Higher Order Thinking Skills (HOTS) like Analysis and Evaluation rather than mere Knowledge recall when teaching civics and history."
+  }
+]

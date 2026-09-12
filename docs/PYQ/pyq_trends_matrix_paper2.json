@@ -1,0 +1,444 @@
+[
+  {
+    "topic_id": "p2_cdp_piaget_vygotsky",
+    "topic_name_en": "Formal Operational Stage and ZPD",
+    "topic_name_hi": "औपचारिक संक्रियात्मक अवस्था और ZPD",
+    "subject_key": "cdp_p2",
+    "frequency_percentage": 95,
+    "avg_questions_per_year": 3.5,
+    "trend": "Increasing",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Jean Piaget",
+      "Lev Vygotsky",
+      "Hypothetico-Deductive Reasoning",
+      "Scaffolding"
+    ],
+    "exam_trap_en": "Confusing concrete operational tasks with formal abstract reasoning required for adolescents.",
+    "exam_trap_hi": "किशोरावस्था के लिए आवश्यक औपचारिक अमूर्त तर्क के साथ मूर्त संक्रियात्मक कार्यों को भ्रमित करना।",
+    "fast_facts_en": [
+      "Paper 2 focuses on abstract, propositional logic.",
+      "Vygotsky emphasizes peer collaboration and dialogic inquiry.",
+      "Development precedes learning for Piaget; learning leads development for Vygotsky."
+    ],
+    "fast_facts_hi": [
+      "पेपर 2 अमूर्त, प्रतिज्ञप्तिक तर्क (propositional logic) पर केंद्रित है।",
+      "वायगोत्स्की सहकर्मी सहयोग और संवादात्मक पूछताछ पर जोर देते हैं।",
+      "पियाजे के लिए विकास सीखने से पहले होता है; वायगोत्स्की के लिए सीखना विकास को निर्देशित करता है।"
+    ]
+  },
+  {
+    "topic_id": "p2_cdp_kohlberg_gilligan",
+    "topic_name_en": "Moral Development and Feminist Critique",
+    "topic_name_hi": "नैतिक विकास और नारीवादी आलोचना",
+    "subject_key": "cdp_p2",
+    "frequency_percentage": 90,
+    "avg_questions_per_year": 2.2,
+    "trend": "Stable",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Lawrence Kohlberg",
+      "Carol Gilligan",
+      "Post-conventional Morality",
+      "Ethics of Care"
+    ],
+    "exam_trap_en": "Ignoring Gilligan's critique which highlights the bias of justice over the ethics of care in Kohlberg's theory.",
+    "exam_trap_hi": "गिलिगन की आलोचना को अनदेखा करना जो कोलबर्ग के सिद्धांत में देखभाल की नैतिकता (ethics of care) पर न्याय के पूर्वाग्रह को उजागर करती है।",
+    "fast_facts_en": [
+      "Paper 2 often tests conventional and post-conventional stages.",
+      "Gilligan argued Kohlberg's sample was male-biased.",
+      "Ethics of care prioritizes relationships and empathy."
+    ],
+    "fast_facts_hi": [
+      "पेपर 2 अक्सर पारंपरिक और उत्तर-पारंपरिक चरणों का परीक्षण करता है।",
+      "गिलिगन का तर्क था कि कोलबर्ग का नमूना पुरुष-पक्षपाती था।",
+      "देखभाल की नैतिकता रिश्तों और सहानुभूति को प्राथमिकता देती है।"
+    ]
+  },
+  {
+    "topic_id": "p2_cdp_inclusive_ed",
+    "topic_name_en": "Inclusive Education for CWSN",
+    "topic_name_hi": "CWSN के लिए समावेशी शिक्षा",
+    "subject_key": "cdp_p2",
+    "frequency_percentage": 92,
+    "avg_questions_per_year": 2.8,
+    "trend": "Increasing",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "RPWD Act 2016",
+      "Differentiated Instruction",
+      "Dyslexia/Dyscalculia",
+      "Equity"
+    ],
+    "exam_trap_en": "Assuming the teacher's role is to clinically diagnose or segregate students with disabilities.",
+    "exam_trap_hi": "यह मानना कि शिक्षक की भूमिका विकलांग छात्रों का नैदानिक परीक्षण करना या उन्हें अलग करना है।",
+    "fast_facts_en": [
+      "Inclusion requires modifying pedagogical strategies, not the child.",
+      "RPWD Act recognizes 21 disabilities.",
+      "Equity involves providing support tailored to individual needs."
+    ],
+    "fast_facts_hi": [
+      "समावेशन के लिए शैक्षणिक रणनीतियों को संशोधित करने की आवश्यकता होती है, न कि बच्चे को।",
+      "RPWD अधिनियम 21 विकलांगताओं को मान्यता देता है।",
+      "समानता में व्यक्तिगत आवश्यकताओं के अनुरूप सहायता प्रदान करना शामिल है।"
+    ]
+  },
+  {
+    "topic_id": "p2_math_algebra",
+    "topic_name_en": "Algebraic Expressions and Identities",
+    "topic_name_hi": "बीजीय व्यंजक और सर्वसमिकाएँ",
+    "subject_key": "math_p2",
+    "frequency_percentage": 92,
+    "avg_questions_per_year": 3.2,
+    "trend": "Stable",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Linear Equations",
+      "Variable Abstraction",
+      "Algebraic Identities"
+    ],
+    "exam_trap_en": "Applying rote identities to word problems without defining the abstract variables correctly.",
+    "exam_trap_hi": "अमूर्त चर को सही ढंग से परिभाषित किए बिना शब्द समस्याओं में रटी हुई सर्वसमिकाओं को लागू करना।",
+    "fast_facts_en": [
+      "Algebra represents the bridge from concrete arithmetic to abstract logic.",
+      "Equations must be balanced on both sides.",
+      "Requires translating contextual language into mathematical syntax."
+    ],
+    "fast_facts_hi": [
+      "बीजगणित मूर्त अंकगणित से अमूर्त तर्क के पुल का प्रतिनिधित्व करता है।",
+      "समीकरणों को दोनों तरफ संतुलित किया जाना चाहिए।",
+      "प्रासंगिक भाषा को गणितीय वाक्यविन्यास में अनुवादित करने की आवश्यकता है।"
+    ]
+  },
+  {
+    "topic_id": "p2_math_geometry_euler",
+    "topic_name_en": "Geometry and Euler's Formula",
+    "topic_name_hi": "ज्यामिति और यूलर का सूत्र",
+    "subject_key": "math_p2",
+    "frequency_percentage": 88,
+    "avg_questions_per_year": 2.1,
+    "trend": "High-Yield",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Leonhard Euler",
+      "Polyhedra",
+      "Vertices, Edges, Faces",
+      "3D Spatial Reasoning"
+    ],
+    "exam_trap_en": "Miscounting the base edges when applying V-E+F=2 to complex pyramids and prisms.",
+    "exam_trap_hi": "जटिल पिरामिडों और प्रिज्मों पर V-E+F=2 लागू करते समय आधार किनारों की गलत गिनती करना।",
+    "fast_facts_en": [
+      "Euler's formula is always V - E + F = 2 for any convex polyhedron.",
+      "A triangular prism has 6 vertices, 9 edges, and 5 faces.",
+      "Tests algebraic substitution within a spatial context."
+    ],
+    "fast_facts_hi": [
+      "यूलर का सूत्र किसी भी उत्तल बहुफलक के लिए हमेशा V - E + F = 2 होता है।",
+      "एक त्रिकोणीय प्रिज्म में 6 शीर्ष, 9 किनारे और 5 फलक होते हैं।",
+      "स्थानिक संदर्भ के भीतर बीजीय प्रतिस्थापन का परीक्षण करता है।"
+    ]
+  },
+  {
+    "topic_id": "p2_math_pedagogy_vanhiele",
+    "topic_name_en": "Van Hiele Levels and Error Analysis",
+    "topic_name_hi": "वैन हील स्तर और त्रुटि विश्लेषण",
+    "subject_key": "math_p2",
+    "frequency_percentage": 90,
+    "avg_questions_per_year": 2.5,
+    "trend": "Increasing",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Pierre van Hiele",
+      "Informal Deduction",
+      "Diagnostic Teaching",
+      "Systematic Errors"
+    ],
+    "exam_trap_en": "Classifying student errors as careless mistakes instead of addressing the underlying conceptual misconception.",
+    "exam_trap_hi": "छात्रों की त्रुटियों को अंतर्निहित वैचारिक गलतफहमी को दूर करने के बजाय लापरवाही के रूप में वर्गीकृत करना।",
+    "fast_facts_en": [
+      "Upper primary focuses on Van Hiele Level 2 (Informal Deduction).",
+      "Errors are systematic and logical to the child.",
+      "Remediation requires concrete-pictorial-abstract scaffolding."
+    ],
+    "fast_facts_hi": [
+      "उच्च प्राथमिक वैन हील स्तर 2 (अनौपचारिक निगमन) पर केंद्रित है।",
+      "त्रुटियां व्यवस्थित होती हैं और बच्चे के लिए तार्किक होती हैं।",
+      "उपचार के लिए मूर्त-चित्रात्मक-अमूर्त मचान (scaffolding) की आवश्यकता होती है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sci_acids_bases",
+    "topic_name_en": "Acids, Bases, and Indicators",
+    "topic_name_hi": "अम्ल, क्षार और सूचक",
+    "subject_key": "science_p2",
+    "frequency_percentage": 89,
+    "avg_questions_per_year": 2.0,
+    "trend": "Stable",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Phenolphthalein",
+      "Litmus",
+      "Neutralization",
+      "Chemical Changes"
+    ],
+    "exam_trap_en": "Incorrectly assuming phenolphthalein turns a specific color in acid; it actually remains colorless.",
+    "exam_trap_hi": "गलत तरीके से यह मानना कि फिनोलफ्थेलिन एसिड में एक विशिष्ट रंग में बदल जाता है; यह वास्तव में रंगहीन रहता है।",
+    "fast_facts_en": [
+      "Phenolphthalein is colorless in acid and pink in base.",
+      "Blue litmus turns red in acid; red litmus turns blue in base.",
+      "Neutralization reactions produce salt and water."
+    ],
+    "fast_facts_hi": [
+      "फिनोलफ्थेलिन एसिड में रंगहीन और बेस में गुलाबी होता है।",
+      "नीला लिटमस एसिड में लाल हो जाता है; लाल लिटमस बेस में नीला हो जाता है।",
+      "उदासीनीकरण प्रतिक्रियाएं नमक और पानी का उत्पादन करती हैं।"
+    ]
+  },
+  {
+    "topic_id": "p2_sci_physics_motion_light",
+    "topic_name_en": "Physics: Motion, Light, and Sound",
+    "topic_name_hi": "भौतिकी: गति, प्रकाश और ध्वनि",
+    "subject_key": "science_p2",
+    "frequency_percentage": 85,
+    "avg_questions_per_year": 2.5,
+    "trend": "Stable",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Distance-Time Graphs",
+      "Reflection/Refraction",
+      "Frequency and Pitch",
+      "Amplitude and Loudness"
+    ],
+    "exam_trap_en": "Confusing the relationship between amplitude/loudness and frequency/pitch in sound waves.",
+    "exam_trap_hi": "ध्वनि तरंगों में आयाम/प्रबलता और आवृत्ति/पिच के बीच संबंध को भ्रमित करना।",
+    "fast_facts_en": [
+      "Higher frequency means higher pitch.",
+      "Larger amplitude means louder sound.",
+      "A straight line on a distance-time graph indicates uniform speed."
+    ],
+    "fast_facts_hi": [
+      "उच्च आवृत्ति का अर्थ है उच्च पिच।",
+      "बड़े आयाम का अर्थ है तेज आवाज।",
+      "दूरी-समय ग्राफ पर एक सीधी रेखा एकसमान गति को दर्शाती है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sci_pedagogy_validities",
+    "topic_name_en": "Science Pedagogy and Validities",
+    "topic_name_hi": "विज्ञान शिक्षाशास्त्र और वैधता",
+    "subject_key": "science_p2",
+    "frequency_percentage": 94,
+    "avg_questions_per_year": 2.8,
+    "trend": "Increasing",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Cognitive Validity",
+      "Process Validity",
+      "Environmental Validity",
+      "Process Skills"
+    ],
+    "exam_trap_en": "Confusing process validity (how science is learned) with cognitive validity (age appropriateness).",
+    "exam_trap_hi": "प्रक्रिया वैधता (विज्ञान कैसे सीखा जाता है) को संज्ञानात्मक वैधता (आयु उपयुक्तता) के साथ भ्रमित करना।",
+    "fast_facts_en": [
+      "Cognitive validity ensures content is within the child's developmental reach.",
+      "Process validity focuses on inquiry and scientific methods.",
+      "Inferring is an educated guess; observing is strictly sensory data collection."
+    ],
+    "fast_facts_hi": [
+      "संज्ञानात्मक वैधता यह सुनिश्चित करती है कि सामग्री बच्चे की विकासात्मक पहुंच के भीतर है।",
+      "प्रक्रिया वैधता पूछताछ और वैज्ञानिक तरीकों पर केंद्रित है।",
+      "अनुमान लगाना एक शिक्षित अनुमान है; अवलोकन सख्ती से संवेदी डेटा संग्रह है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sst_history_modern",
+    "topic_name_en": "Modern History and 1857 Revolt",
+    "topic_name_hi": "आधुनिक इतिहास और 1857 का विद्रोह",
+    "subject_key": "sst_history",
+    "frequency_percentage": 96,
+    "avg_questions_per_year": 3.6,
+    "trend": "High-Yield",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Colonial Economic Policies",
+      "Indian National Movement",
+      "Social Reformers"
+    ],
+    "exam_trap_en": "Memorizing dates instead of understanding the causal socio-economic impacts of British policies.",
+    "exam_trap_hi": "ब्रिटिश नीतियों के कारण सामाजिक-आर्थिक प्रभावों को समझने के बजाय तारीखों को याद करना।",
+    "fast_facts_en": [
+      "The 1857 revolt was fueled by economic exploitation and social interference.",
+      "Reformers like Ambedkar and Phule fought against caste-based discrimination.",
+      "Questions frequently use Assertion-Reasoning to test historical causality."
+    ],
+    "fast_facts_hi": [
+      "1857 के विद्रोह को आर्थिक शोषण और सामाजिक हस्तक्षेप से बढ़ावा मिला था।",
+      "अंबेडकर और फुले जैसे सुधारकों ने जाति-आधारित भेदभाव के खिलाफ लड़ाई लड़ी।",
+      "प्रश्न ऐतिहासिक कार्य-कारण का परीक्षण करने के लिए अक्सर कथन-कारण (Assertion-Reasoning) का उपयोग करते हैं।"
+    ]
+  },
+  {
+    "topic_id": "p2_sst_geo_time",
+    "topic_name_en": "Longitude and Standard Time Calculations",
+    "topic_name_hi": "देशांतर और मानक समय की गणना",
+    "subject_key": "sst_geo",
+    "frequency_percentage": 82,
+    "avg_questions_per_year": 1.9,
+    "trend": "Stable",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Greenwich Mean Time (GMT)",
+      "Indian Standard Time (IST)",
+      "Earth's Rotation"
+    ],
+    "exam_trap_en": "Subtracting time when calculating for Eastern longitudes instead of adding.",
+    "exam_trap_hi": "जोड़ने के बजाय पूर्वी देशांतर के लिए गणना करते समय समय घटाना।",
+    "fast_facts_en": [
+      "The Earth rotates 15 degrees per hour (1 degree = 4 minutes).",
+      "Time is ahead (added) in the East and behind (subtracted) in the West.",
+      "IST is GMT +5:30 (82.5 degrees East)."
+    ],
+    "fast_facts_hi": [
+      "पृथ्वी 15 डिग्री प्रति घंटे (1 डिग्री = 4 मिनट) घूमती है।",
+      "समय पूर्व में आगे (जोड़ा जाता है) और पश्चिम में पीछे (घटाया जाता है) होता है।",
+      "IST, GMT +5:30 (82.5 डिग्री पूर्व) है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sst_civics_marginalization",
+    "topic_name_en": "Marginalization and Adivasis",
+    "topic_name_hi": "हाशिए पर होना (Marginalization) और आदिवासी",
+    "subject_key": "sst_civics",
+    "frequency_percentage": 87,
+    "avg_questions_per_year": 2.2,
+    "trend": "Increasing",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Social Justice",
+      "Stereotyping",
+      "Sachar Committee",
+      "Displacement"
+    ],
+    "exam_trap_en": "Assuming traditional dances and colorful costumes adequately represent the socio-economic reality of Adivasis without recognizing stereotyping.",
+    "exam_trap_hi": "यह मानना कि पारंपरिक नृत्य और रंगीन वेशभूषा रूढ़िवादिता को पहचाने बिना आदिवासियों की सामाजिक-आर्थिक वास्तविकता का पर्याप्त रूप से प्रतिनिधित्व करते हैं।",
+    "fast_facts_en": [
+      "Portraying Adivasis only in traditional gear is a form of stereotyping.",
+      "The Sachar Committee documented the marginalization of the Muslim community.",
+      "Development projects often lead to the systemic displacement of tribes."
+    ],
+    "fast_facts_hi": [
+      "आदिवासियों को केवल पारंपरिक वेशभूषा में चित्रित करना रूढ़िवादिता का एक रूप है।",
+      "सच्चर समिति ने मुस्लिम समुदाय के हाशिए पर होने का दस्तावेजीकरण किया।",
+      "विकास परियोजनाओं से अक्सर जनजातियों का व्यवस्थागत विस्थापन होता है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sst_civics_constitution",
+    "topic_name_en": "Constitution and Democratic Governance",
+    "topic_name_hi": "संविधान और लोकतांत्रिक शासन",
+    "subject_key": "sst_civics",
+    "frequency_percentage": 89,
+    "avg_questions_per_year": 2.5,
+    "trend": "Stable",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Separation of Powers",
+      "Fundamental Rights",
+      "Panchayati Raj",
+      "Rule of Law"
+    ],
+    "exam_trap_en": "Confusing the overlapping roles of the executive and the legislature in a parliamentary democracy.",
+    "exam_trap_hi": "संसदीय लोकतंत्र में कार्यपालिका और विधायिका की अतिव्यापी (overlapping) भूमिकाओं को भ्रमित करना।",
+    "fast_facts_en": [
+      "The legislature makes laws; the executive implements them.",
+      "Panchayati Raj is a 3-tier system of local self-government.",
+      "Secularism in India means the state maintains equal distance/respect for all religions."
+    ],
+    "fast_facts_hi": [
+      "विधायिका कानून बनाती है; कार्यपालिका उन्हें लागू करती है।",
+      "पंचायती राज स्थानीय स्वशासन की 3-स्तरीय प्रणाली है।",
+      "भारत में धर्मनिरपेक्षता का अर्थ है कि राज्य सभी धर्मों से समान दूरी/सम्मान बनाए रखता है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sst_pedagogy_inquiry",
+    "topic_name_en": "Historical Inquiry and Primary Sources",
+    "topic_name_hi": "ऐतिहासिक पूछताछ और प्राथमिक स्रोत",
+    "subject_key": "sst_pedagogy",
+    "frequency_percentage": 85,
+    "avg_questions_per_year": 2.0,
+    "trend": "Increasing",
+    "priority": "Tier-1",
+    "key_theorists_or_concepts": [
+      "Primary vs Secondary Sources",
+      "Critical Thinking",
+      "Evidence-Based Narratives"
+    ],
+    "exam_trap_en": "Classifying a modern encyclopedic article about ancient history as a primary source.",
+    "exam_trap_hi": "प्राचीन इतिहास के बारे में एक आधुनिक विश्वकोश लेख को प्राथमिक स्रोत के रूप में वर्गीकृत करना।",
+    "fast_facts_en": [
+      "Primary sources are first-hand accounts or artifacts from the time period.",
+      "Textbooks and modern documentaries are secondary sources.",
+      "Pedagogy emphasizes critical analysis over rote memorization of facts."
+    ],
+    "fast_facts_hi": [
+      "प्राथमिक स्रोत समय अवधि के प्रत्यक्ष खाते या कलाकृतियां हैं।",
+      "पाठ्यपुस्तकें और आधुनिक वृत्तचित्र माध्यमिक स्रोत हैं।",
+      "शिक्षाशास्त्र तथ्यों को रटने के बजाय महत्वपूर्ण विश्लेषण पर जोर देता है।"
+    ]
+  },
+  {
+    "topic_id": "p2_sst_history_ancient",
+    "topic_name_en": "Ancient Empires and Socio-cultural History",
+    "topic_name_hi": "प्राचीन साम्राज्य और सामाजिक-सांस्कृतिक इतिहास",
+    "subject_key": "sst_history",
+    "frequency_percentage": 80,
+    "avg_questions_per_year": 1.8,
+    "trend": "Stable",
+    "priority": "Tier-2",
+    "key_theorists_or_concepts": [
+      "Harappan Civilization",
+      "Vedic Age",
+      "Ashoka's Dhamma"
+    ],
+    "exam_trap_en": "Focusing solely on dynastic timelines rather than the socio-economic conditions of the era.",
+    "exam_trap_hi": "युग की सामाजिक-आर्थिक स्थितियों के बजाय केवल वंशावली समयसीमा पर ध्यान केंद्रित करना।",
+    "fast_facts_en": [
+      "Ashoka's Dhamma was a moral code, not a new religion.",
+      "The Harappan civilization is noted for advanced urban planning.",
+      "Vedic texts reflect the transition from pastoral to agricultural societies."
+    ],
+    "fast_facts_hi": [
+      "अशोक का धम्म एक नैतिक संहिता थी, कोई नया धर्म नहीं।",
+      "हड़प्पा सभ्यता उन्नत शहरी नियोजन के लिए विख्यात দূত है।",
+      "वैदिक ग्रंथ देहाती से कृषि समाजों में संक्रमण को दर्शाते हैं।"
+    ]
+  },
+  {
+    "topic_id": "p2_sci_biology_cells",
+    "topic_name_en": "Cell Structure and Plant/Animal Reproduction",
+    "topic_name_hi": "कोशिका संरचना और पौधे/पशु प्रजनन",
+    "subject_key": "science_p2",
+    "frequency_percentage": 78,
+    "avg_questions_per_year": 1.7,
+    "trend": "Stable",
+    "priority": "Tier-2",
+    "key_theorists_or_concepts": [
+      "Organelles",
+      "Asexual vs Sexual Reproduction",
+      "Cell Wall vs Cell Membrane"
+    ],
+    "exam_trap_en": "Assuming animal cells possess cell walls or large central vacuoles.",
+    "exam_trap_hi": "यह मानना कि पशु कोशिकाओं में कोशिका भित्ति (cell wall) या बड़ी केंद्रीय रिक्तिकाएँ (vacuoles) होती हैं।",
+    "fast_facts_en": [
+      "Plant cells have rigid cell walls and chloroplasts; animal cells do not.",
+      "Asexual reproduction involves one parent and yields identical offspring.",
+      "Mitochondria are the powerhouses of the cell."
+    ],
+    "fast_facts_hi": [
+      "पादप कोशिकाओं में कठोर कोशिका भित्ति और क्लोरोप्लास्ट होते हैं; पशु कोशिकाओं में नहीं।",
+      "अलैंगिक प्रजनन में एक माता-पिता शामिल होते हैं और समान संतान पैदा करते हैं।",
+      "माइटोकॉन्ड्रिया कोशिका के पावरहाउस हैं।"
+    ]
+  }
+]
